@@ -1,0 +1,19 @@
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 3rem 12rem 3rem 12rem;
+}
+
+main .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: row;
+}
+
+main .top-section h2 {
+    margin-right: auto;
+}
