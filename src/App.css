@@ -7,6 +7,7 @@
   --secondary-pink: #FBDABB;
   --secondary-grey: #EDEFEE;
   --secondary-dark: #333333;
+  --tertiary-grey: #848484;
 }
 
 
@@ -59,6 +60,14 @@ h3 {
   font-weight: 400;
 }
 
+h4 {
+  color: var(--secondary-dark, #333333);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
 h5 {
   color: var(--secondary-pink, #FBDABB);
   font-size: 1.8rem;
@@ -70,7 +79,7 @@ h5 {
 
 p {
   color: var(--secondary-dark, #333333);
-  font-weight: 400;
+  font-size: .9rem;
 }
 
 a {

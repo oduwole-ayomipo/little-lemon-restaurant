@@ -17,3 +17,10 @@ main .top-section {
 main .top-section h2 {
     margin-right: auto;
 }
+
+.card-container {
+    width: 100%;
+    margin: 3rem 0 0 ;
+    display: flex;
+    justify-content: space-between;
+}
