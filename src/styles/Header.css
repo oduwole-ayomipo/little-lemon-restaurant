@@ -15,6 +15,7 @@ header .header-title {
 
 header .header-content {
     display: flex;
+    align-items: flex-end;
     flex-direction: row;
     width: 100%;
 }
