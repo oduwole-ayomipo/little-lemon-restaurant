@@ -7,11 +7,11 @@ function Header() {
     <header>
       <div className='header-title'>
           <h1>Little Lemon</h1>
+          <h5>Chicago</h5>
       </div>
 
       <div className='header-content'>
         <div className='header-information'>
-          <h5>Chicago</h5>
           <h3>
             Little lemon is a family owned Mediterranean restaurant. We focus on the traditional and native recipes served with a modern twist.
           </h3>
