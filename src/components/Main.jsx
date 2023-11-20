@@ -45,7 +45,7 @@ function Main() {
         <h2>Testimonials</h2>
 
         <div className='card-container'>
-          <TestimonyCard 
+          <TestimonyCard
             FoodImg={testimonial}
           />
           <TestimonyCard />
