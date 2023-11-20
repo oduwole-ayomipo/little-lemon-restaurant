@@ -1,5 +1,6 @@
 import '../styles/Main.css'
 import FoodCard from './FoodCard'
+import testimonial from '../images/testimonial1.png'
 import TestimonyCard from './TestimonyCard'
 import GreekSalad from '../images/greek-salad.svg'
 import Bruschette from '../images/bruschette.svg'
@@ -44,7 +45,9 @@ function Main() {
         <h2>Testimonials</h2>
 
         <div className='card-container'>
-          <TestimonyCard />
+          <TestimonyCard 
+            FoodImg={testimonial}
+          />
           <TestimonyCard />
           <TestimonyCard />
           <TestimonyCard />

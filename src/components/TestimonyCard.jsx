@@ -1,15 +1,13 @@
 import React from 'react'
-import '../styles/TestimonyCard.css'
+import '../styles/FoodCard.css'
 import '../App.css'
 
-function FoodCard(
-    {FoodName,
-    FoodPrice,
-    FoodDescription,
+function TestimonyCard(
+    {
     FoodImg}
 ) {
   return (
-    <div className='card'>
+    <div className='testimony-card'>
        <h4>Max Reed</h4>
         <div className='card-description'>
             <img src={FoodImg} alt="" className='card-image' />
@@ -19,4 +17,4 @@ function FoodCard(
   )
 }
 
-export default FoodCard
+export default TestimonyCard
