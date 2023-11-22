@@ -1,4 +1,4 @@
-header {
+header, .about-section {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -8,14 +8,25 @@ header {
     padding: 3rem 18rem 3rem 12rem;
 }
 
-header .header-title {
+.about-section {
+    padding: 3rem 12rem 3rem 12rem;
+}
+
+
+.about-section {
+    background-color: var(--secondary-grety);
+}
+
+header .header-title,
+.about-section .about-title {
     width: 100%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
 }
 
-header .header-content {
+header .header-content,
+.about-section .about-content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,17 +34,29 @@ header .header-content {
     width: 100%;
 }
 
-header .header-information {
+header .header-information,
+.about-section .about-information{
     display: flex;
     flex-direction: column;
 }
 
-header .header-information h3 {
+.about-section .about-information {
+    flex-direction: row;
+    gap: 2rem;
+}
+
+header .header-information h3,
+.about-section .about-information h3 {
     margin: 2.5rem 0 1rem;
     width: 80%;
 }
 
-header .header-right-img {
+.about-section .about-information h3 {
+    color: var(--secondary-dark);
+}
+
+header .header-right-img,
+.about-section .about-right-img {
     width: 28rem;
     height: 18rem;
     flex-shrink: 0;
