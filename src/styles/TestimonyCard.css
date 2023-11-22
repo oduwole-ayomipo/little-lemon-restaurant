@@ -52,3 +52,10 @@
     font-weight: 700;
     letter-spacing: -0.7px;
 }
+
+.starratings-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: left;
+}

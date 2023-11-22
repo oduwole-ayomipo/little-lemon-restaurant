@@ -18,11 +18,6 @@ function Nav() {
         <li><Link to="/order-online">Order Online</Link></li>
         <li><Link to="/login">Login</Link></li>
       </ul>
-
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-
-
     </nav>
   )
 }
