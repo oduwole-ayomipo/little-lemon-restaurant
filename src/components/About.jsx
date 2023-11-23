@@ -1,5 +1,6 @@
 import '../styles/Header.css'
-import LLS from '../images/restaurant.jpg'
+import chef from '../images/chef2.jpg'
+import littlelemon from '../images/restaurant2.jpg'
 import React from 'react'
 
 function About() {
@@ -15,7 +16,10 @@ function About() {
           <h3>
              At Little Lemon, we invite you to embark on a culinary journey that transcends time, where the essence of the Mediterranean comes to life in every bite. Join us for a celebration of tradition, and the joy of sharing delicious meals with the ones you love.
           </h3>
-          <img src={LLS} alt=""  className='about-right-img'/>
+          <div className='about-img-container'>
+            <img src={chef} alt=""  className='about-right-img1'/>
+            <img src={littlelemon} alt=""  className='about-right-img2'/>
+          </div>
         </div>
       </div>
     </div>

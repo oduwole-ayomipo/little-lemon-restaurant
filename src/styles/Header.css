@@ -5,11 +5,12 @@ header, .about-section {
     justify-content: space-evenly;
     flex-direction: column;
     background-color: var(--primary-green);
-    padding: 3rem 18rem 3rem 12rem;
+    padding: 3rem 15rem 3rem 12rem;
 }
 
 .about-section {
     padding: 3rem 12rem 3rem 12rem;
+    position: relative;
 }
 
 
@@ -29,8 +30,9 @@ header .header-content,
 .about-section .about-content {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    align-items: start;
+    justify-content: space-between;
+    gap: 2rem;
     width: 100%;
 }
 
@@ -43,22 +45,46 @@ header .header-information,
 .about-section .about-information {
     flex-direction: row;
     gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
 }
 
-header .header-information h3,
+header .header-information h3 {
+    margin: 2.5rem 0 1rem;
+    width: 100%;
+}
+
 .about-section .about-information h3 {
     margin: 2.5rem 0 1rem;
-    width: 80%;
+    width: 50%;
 }
+
 
 .about-section .about-information h3 {
     color: var(--secondary-dark);
 }
 
-header .header-right-img,
-.about-section .about-right-img {
+
+
+header .header-right-img{
     width: 28rem;
     height: 18rem;
     flex-shrink: 0;
     border-radius: 1.1rem;
+}
+
+ .about-right-img1 {
+    top: 9%;
+    width: 19%;
+    position: absolute;
+    border-radius: 1.1rem;
+    right: 25%;
+}
+
+.about-right-img2 {
+    top: 21%;
+    width: 19%;
+    position: absolute;
+    border-radius: 1.1rem;
+    right: 14%;
 }
