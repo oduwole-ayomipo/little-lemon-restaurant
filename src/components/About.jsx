@@ -13,7 +13,7 @@ function About() {
       <div className='about-content'>
         <div className='about-information'>
           <h3>
-             At Little Lemon, we invite you to embark on a culinary journey that transcends time, where the essence of the Mediterranean comes to life in every bite. Join us for a celebration of tradition, innovation, and the joy of sharing delicious meals with the ones you love.
+             At Little Lemon, we invite you to embark on a culinary journey that transcends time, where the essence of the Mediterranean comes to life in every bite. Join us for a celebration of tradition, and the joy of sharing delicious meals with the ones you love.
           </h3>
           <img src={LLS} alt=""  className='about-right-img'/>
         </div>

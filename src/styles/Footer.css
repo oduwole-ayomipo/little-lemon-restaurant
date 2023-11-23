@@ -1,0 +1,35 @@
+footer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: var(--primary-green);
+    padding: 2rem 18rem 2rem 12rem;
+    color: var(--secondary-pink);
+}
+
+.footer-img{
+    width: 18%;
+    border-radius: 1rem;
+}
+
+footer .footer-column ul li{
+    padding: 0.1rem 0;
+}
+
+footer .footer-column ul li a {
+    color: var(--secondary-grey);
+    font-weight: 400;
+    font-size: 0.9rem ;
+}
+
+footer .footer-column ul li a:hover {
+    color: var(--secondary-pink);
+    font-weight: 500;
+}
+
+.footer-heading {
+    margin: 0 0 1rem 0;
+}
