@@ -8,13 +8,13 @@ function App() {
   return (
     <>
       <Nav />
-      <Routes> 
+      <Routes>
         <Route path="/" element = {<Home />} />
         <Route path="/about" element = {<Home />} />
         <Route path="/Menu" element = {<Home />} />
         <Route path="/Reservations" element = {<Home />} />
         <Route path="/order-online" element = {<Home />} />
-        <Route path="/login" element = {<Home />} />      
+        <Route path="/login" element = {<Home />} /> 
       </Routes>
     </>
   );
