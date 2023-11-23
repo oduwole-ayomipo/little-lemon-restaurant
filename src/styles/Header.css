@@ -30,7 +30,7 @@ header .header-content,
 .about-section .about-content {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
     width: 100%;

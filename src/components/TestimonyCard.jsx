@@ -1,18 +1,23 @@
 import React from 'react'
 import '../styles/FoodCard.css'
-import starratingsone from "../images/starratings-one.svg"
-import imgone from "../images/img-one.jpg"
 import '../App.css'
 
-function TestimonyCard() {
+function TestimonyCard(
+  {
+    ClientName,
+    ClientImg,
+    Ratings,
+    ClientComment
+  }
+) {
   return (
     <div className='testimony-card'>
-       <h4>Max Reed</h4>
+       <h4>{ClientName}</h4>
         <div className='card-description testimony'>
-            <img src={imgone} width={75} alt="" className='card-image testimony-image' />
-            <img src={starratingsone} width={90} alt="" />   
+            <img src={ClientImg} width={75} alt="" className='card-image testimony-image' />
+            <img src={Ratings} width={90} alt="" />
         </div>
-        <p>“The blend of traditional Mediterranean recipes creates a unique and unforgettable dining experience.”</p>
+        <p>{ClientComment}</p>
     </div>
   )
 }

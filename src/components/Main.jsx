@@ -1,10 +1,21 @@
 import '../styles/Main.css'
 import FoodCard from './FoodCard'
-import testimonial from '../images/testimonial1.png'
+
 import TestimonyCard from './TestimonyCard'
 import GreekSalad from '../images/greek-salad.svg'
 import Bruschette from '../images/bruschette.svg'
 import Lemondessert from '../images/lemon-dessert.svg'
+
+import clientOne from '../images/img-one.jpg'
+import clientTwo from '../images/img-two.jpg'
+import clientThree from '../images/img-three.jpg'
+import clientFour from '../images/img-four.jpg'
+
+import rating1 from '../images/starratings-one.svg'
+import rating2 from '../images/starratings-two.svg'
+import rating3 from '../images/starratings-three.svg'
+import rating4 from '../images/starratings-four.svg'
+
 import React from 'react'
 
 function Main() {
@@ -46,11 +57,29 @@ function Main() {
 
         <div className='card-container'>
           <TestimonyCard
-            FoodImg={testimonial}
+            ClientName="Chike Igwe"
+            ClientImg = {clientOne}
+            Ratings = {rating1}
+            ClientComment="The blend of traditional Mediterranean recipes creates a unique and unforgettable dining experience."
           />
-          <TestimonyCard />
-          <TestimonyCard />
-          <TestimonyCard />
+          <TestimonyCard 
+            ClientName="Max Red"
+            ClientImg = {clientTwo}
+            Ratings = {rating2}
+            ClientComment="Discovering Little Lemon is like uncovering a hidden culinary gem. The dining experience is truly one-of-a-kind."
+          />
+          <TestimonyCard 
+             ClientName="Olive Rod"
+             ClientImg = {clientThree}
+             Ratings = {rating3}
+             ClientComment="The blend of classic recipes creates a dining experience that keeps me coming back for more."
+          />
+          <TestimonyCard 
+            ClientName="Edward Buffet"
+            ClientImg = {clientFour}
+            Ratings = {rating4}
+            ClientComment = "As a regular at Little Lemon, I can't get enough of their authentic dishes. Especially, the Lemon Dessert Specials. I love it!"
+          />
 
         </div>
       </section>
