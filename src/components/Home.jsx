@@ -1,7 +1,6 @@
 import React from 'react'
 import '../App.css'
 import Main from './Main';
-import Footer from './Footer';
 import Header from './Header';
 import About from './About';
 
@@ -11,7 +10,6 @@ function Home() {
         <Header />
         <Main />
         <About />
-        <Footer />
     </>
   )
 }
