@@ -1,0 +1,68 @@
+{
+    "allmenu": [
+      {
+        "id": 1,
+        "name": "Spaghetti Bolognese",
+        "price": 12.99,
+        "description": "Classic Italian pasta dish with savory meat sauce.",
+        "img": "greek-salad.svg"
+      },
+
+      {
+        "id": 2,
+        "name": "Caprese Salad",
+        "price":  8.99,
+        "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
+        "img": "greek-salad.svg"
+      },
+
+      {
+        "id": 1,
+        "name": "Spaghetti Bolognese",
+        "price": 12.99,
+        "description": "Classic Italian pasta dish with savory meat sauce.",
+        "img": "greek-salad.svg"
+      },
+
+      {
+        "id": 2,
+        "name": "Caprese Salad",
+        "price":  8.99,
+        "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
+        "img": "greek-salad.svg"
+      },
+
+      {
+        "id": 1,
+        "name": "Spaghetti Bolognese",
+        "price": 12.99,
+        "description": "Classic Italian pasta dish with savory meat sauce.",
+        "img": "greek-salad.svg"
+      },
+
+      {
+        "id": 2,
+        "name": "Caprese Salad",
+        "price":  8.99,
+        "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
+        "img": "greek-salad.svg"
+      },
+
+      {
+        "id": 1,
+        "name": "Spaghetti Bolognese",
+        "price": 12.99,
+        "description": "Classic Italian pasta dish with savory meat sauce.",
+        "img": "greek-salad.svg"
+      },
+
+      {
+        "id": 2,
+        "name": "Caprese Salad",
+        "price":  8.99,
+        "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
+        "img": "greek-salad.svg"
+      }
+
+    ]
+  }

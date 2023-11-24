@@ -2,22 +2,17 @@ import React from 'react'
 import '../styles/FoodCard.css'
 import '../App.css'
 
-function FoodCard(
-    {FoodName,
-    FoodPrice,
-    FoodDescription,
-    FoodImg}
-) {
+function FoodCard (props) {
   return (
     <div className='card'>
-        <img src={FoodImg} alt="" className='card-image' />
+        <img src = {require(`../images/${props.menu.img}`)} alt="" className='card-image' />
         <div className='card-description'>
             <div>
                 <div className='card-top-description'>
-                    <h4>{FoodName}</h4>
-                    <p>{FoodPrice}</p>
+                    <h4>{props.menu.name}</h4>
+                    <p>{props.menu.price}</p>
                 </div>
-                <p>{FoodDescription}</p>
+                <p>{props.menu.description}</p>
             </div>
             <div className='card-footer'>
                 <p> Order a Delivery</p>

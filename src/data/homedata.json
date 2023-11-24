@@ -1,0 +1,61 @@
+{
+    "specialMenu" : [
+        {
+            "id": 1,
+            "name": "Greek Salad",
+            "price": "$6.78",
+            "description": "The famous Greek salad of crispy lettuce, green pepper, olives, soy sauce and our Chicago finest bell pepper and tomato.",
+            "img": "greek-salad.svg"
+        },
+
+        {
+            "id": 2,
+            "name": "Bruschette",
+            "price": "$3.45",
+            "description": "Our Bruschette is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
+            "img": "bruschette.svg"
+        },
+
+        {
+            "id": 3,
+            "name": "Lemon Dessert",
+            "price": "$3.00",
+            "description": "A luscious blend of zesty lemon-infused sponge cake, soaked in refreshing lemon syrup, and crowned with silky lemon.",
+            "img": "lemon-dessert.svg"
+        }
+    ],
+
+    "customerTestimony" : [
+        {
+            "id": 4,
+            "name": "Chike Igwe",
+            "img":"img-one.jpg",
+            "ratings" : "starratings-one.svg",
+            "comment": "The blend of traditional Mediterranean recipes creates a unique and unforgettable dining experience."
+        },
+
+        {
+            "id": 5,
+            "name": "Max Red",
+            "img":"img-two.jpg",
+            "ratings" : "starratings-two.svg",
+            "comment": "Discovering Little Lemon is like uncovering a hidden culinary gem. The dining experience is truly one-of-a-kind."
+        },
+
+        {
+            "id": 6,
+            "name": "Olive Rod",
+            "img":"img-three.jpg",
+            "ratings" : "starratings-three.svg",
+            "comment": "The blend of classic recipes creates a dining experience that keeps me coming back for more."
+        },
+
+        {
+            "id": 7,
+            "name": "Edward Buffet",
+            "img":"img-four.jpg",
+            "ratings" : "starratings-four.svg",
+            "comment": "As a regular at Little Lemon, I can't get enough of their authentic dishes. Esp. , the Lemon Dessert Specials."
+        }
+    ]
+}

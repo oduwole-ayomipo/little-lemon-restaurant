@@ -5,6 +5,7 @@ import "../styles/Main.css"
 import '../components/FoodCard'
 import '../App.css'
 import FoodCard from './FoodCard'
+import allMenuData from '../data/allmenu.json'
 
 
 import GreekSalad from '../images/greek-salad.svg'
@@ -12,6 +13,7 @@ import Bruschette from '../images/bruschette.svg'
 import Lemondessert from '../images/lemon-dessert.svg'
 
 function Menu() {
+
   return (
     <>
     <div>
@@ -31,70 +33,11 @@ function Menu() {
     <hr />
     <main  className='week-special'>
         <div className='card-container'>
-            <FoodCard 
-                FoodName = "Greek Salad"
-                FoodPrice = "$76.78"
-                FoodDescription = "The famous Greek salad of crispy lettuce, green pepper, olives, soy sauce and our Chicago finest bell pepper and tomato."
-                FoodImg = {GreekSalad}
-            />
-
-            <FoodCard 
-                FoodName = "Bruschette"
-                FoodPrice = "$63.45"
-                FoodDescription = "Our Bruschette is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
-                FoodImg = {Bruschette}
-            />
-
-            <FoodCard 
-                FoodName = "Lemon Dessert"
-                FoodPrice = "$23.00"
-                FoodDescription = "A luscious blend of zesty lemon-infused sponge cake, soaked in refreshing lemon syrup, and crowned with silky lemon."
-                FoodImg = {Lemondessert}
-            />
-        </div>
-        <div className='card-container'>
-            <FoodCard 
-                FoodName = "Greek Salad"
-                FoodPrice = "$76.78"
-                FoodDescription = "The famous Greek salad of crispy lettuce, green pepper, olives, soy sauce and our Chicago finest bell pepper and tomato."
-                FoodImg = {GreekSalad}
-            />
-
-            <FoodCard 
-                FoodName = "Bruschette"
-                FoodPrice = "$63.45"
-                FoodDescription = "Our Bruschette is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
-                FoodImg = {Bruschette}
-            />
-
-            <FoodCard 
-                FoodName = "Lemon Dessert"
-                FoodPrice = "$23.00"
-                FoodDescription = "A luscious blend of zesty lemon-infused sponge cake, soaked in refreshing lemon syrup, and crowned with silky lemon."
-                FoodImg = {Lemondessert}
-            />
-        </div>
-        <div className='card-container'>
-            <FoodCard 
-                FoodName = "Greek Salad"
-                FoodPrice = "$76.78"
-                FoodDescription = "The famous Greek salad of crispy lettuce, green pepper, olives, soy sauce and our Chicago finest bell pepper and tomato."
-                FoodImg = {GreekSalad}
-            />
-
-            <FoodCard 
-                FoodName = "Bruschette"
-                FoodPrice = "$63.45"
-                FoodDescription = "Our Bruschette is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil."
-                FoodImg = {Bruschette}
-            />
-
-            <FoodCard 
-                FoodName = "Lemon Dessert"
-                FoodPrice = "$23.00"
-                FoodDescription = "A luscious blend of zesty lemon-infused sponge cake, soaked in refreshing lemon syrup, and crowned with silky lemon."
-                FoodImg = {Lemondessert}
-            />
+            {allMenuData.allmenu.map ((menu) => (
+                <FoodCard
+                    key={menu.id}
+                    menu = {menu}/>
+            ))}
         </div>
     </main>
     </>
