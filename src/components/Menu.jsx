@@ -7,7 +7,6 @@ import '../App.css'
 import FoodCard from './FoodCard'
 
 
-import TestimonyCard from './TestimonyCard'
 import GreekSalad from '../images/greek-salad.svg'
 import Bruschette from '../images/bruschette.svg'
 import Lemondessert from '../images/lemon-dessert.svg'
@@ -19,7 +18,7 @@ function Menu() {
         <div className='footer-lls'></div>
         <div className='footer-lls-overlay'>Little Lemon Menu</div>
     </div>
-    <nav>
+    <nav className='menu'>
         <ul className='nav-links'>
             <li><a href="">All</a></li>
             <li><a href="">Seafoods</a></li>

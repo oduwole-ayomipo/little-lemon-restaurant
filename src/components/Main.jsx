@@ -78,7 +78,7 @@ function Main() {
             ClientName="Edward Buffet"
             ClientImg = {clientFour}
             Ratings = {rating4}
-            ClientComment = "As a regular at Little Lemon, I can't get enough of their authentic dishes. Especially, the Lemon Dessert Specials. I love it!"
+            ClientComment = "As a regular at Little Lemon, I can't get enough of their authentic dishes. Esp. , the Lemon Dessert Specials."
           />
 
         </div>
