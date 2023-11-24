@@ -79,8 +79,15 @@
 }
 
 .card-footer p {
+    margin: 1rem 0 0 0 ;
     font-weight: 700;
     letter-spacing: -0.7px;
+    opacity: 85%;
+}
+
+.card-footer p:hover {
+    opacity: 100%;
+    color: var(--primary-green);
 }
 
 .starratings-container {

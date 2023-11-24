@@ -1,0 +1,73 @@
+main {
+    margin-top: 6rem;
+}
+
+.about-container-one,
+.about-container-three,
+.about-container-four {
+    padding: 3rem 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-one-left {
+    width: 30%;
+    padding: 1rem;
+}
+
+.container-one-right {
+    width: 70%;
+    padding: 1rem;
+}
+
+.container-one-right h1 {
+    color: var(--secondary-black);
+}
+
+.container-one-right h5 {
+    color: var(--primary-green);
+    letter-spacing: -2px;
+    padding: 0.6rem 0;
+}
+
+.container-one-right p,
+.about-container-three p,
+.about-container-four p{
+    padding: 0.7rem 0;
+    line-height: 1.3rem;
+    font-size: 1rem;
+}
+
+.about-container-three p::first-letter ,
+.about-container-four p::first-letter {
+    font-size: 3rem; /* Adjust the size as needed */
+    font-weight: 800;
+    float: left;
+    margin-bottom: -1rem;
+    line-height: 1; /* Ensures the text aligns properly */
+  }
+
+.about-container-two {
+    margin: -6rem 0 3rem 0;
+}
+
+.about-container-three,
+.about-container-four {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-container-three p,
+.about-container-four img {
+    width: 50%;
+}
+
+.about-container-three img,
+.about-container-four p {
+    width: 40%;
+}
+

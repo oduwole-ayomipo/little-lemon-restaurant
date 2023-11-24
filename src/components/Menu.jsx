@@ -19,14 +19,9 @@ function Menu() {
         <div className='footer-lls menu-banner'></div>
         <div className='footer-lls-overlay'>Little Lemon Menu</div>
     </div>
-    <nav className='menu-nav'>
+    <nav className='menu-nav' >
         <ul className='nav-links'>
-            <li><a href="">All</a></li>
-            <li><a href="">Seafoods</a></li>
-            <li><a href="">Salad</a></li>
-            <li><a href="">Appetizers</a></li>
-            <li><a href="">Burgers</a></li>
-            <li><a href="">Main Course</a></li>
+            <li><a href="">Our Dishes</a></li>
         </ul>
     </nav>
     <hr />

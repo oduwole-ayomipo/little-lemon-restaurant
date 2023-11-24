@@ -11,7 +11,7 @@
       "id": 2,
       "name": "Caprese Salad",
       "price": 8.99,
-      "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
+      "description": "Healthy salad with fresh vegetables, olives, and feta cheese.",
       "img": "caprese-salad.svg"
     },
     {
@@ -32,7 +32,7 @@
       "id": 5,
       "name": "Greek Salad",
       "price": 9.99,
-      "description": "Healthy salad with fresh vegetables, olives, and feta cheese.",
+      "description": " A refreshing salad with ripe tomatoes, mozzarella, and basil.",
       "img": "greek-salad.svg"
     },
     {
