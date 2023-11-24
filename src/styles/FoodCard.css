@@ -1,5 +1,4 @@
 .card {
-    position: relative;
     width: calc(100% / 3.4);
     display: flex;
     flex-direction: column;
@@ -10,12 +9,12 @@
     transform: translate(0, 0);
 }
 
+
 .testimony-card {
     box-shadow: none;
     border: 1px solid #808080;
     padding: .8rem;
     border-radius: 1rem;
-    width: 100%;
 }
 
 .testimony-card h4, .testimony-card p {
@@ -41,7 +40,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1.6rem;
 }
 
 .testimony {

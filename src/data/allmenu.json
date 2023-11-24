@@ -1,68 +1,60 @@
 {
-    "allmenu": [
-      {
-        "id": 1,
-        "name": "Spaghetti Bolognese",
-        "price": 12.99,
-        "description": "Classic Italian pasta dish with savory meat sauce.",
-        "img": "greek-salad.svg"
-      },
-
-      {
-        "id": 2,
-        "name": "Caprese Salad",
-        "price":  8.99,
-        "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
-        "img": "greek-salad.svg"
-      },
-
-      {
-        "id": 1,
-        "name": "Spaghetti Bolognese",
-        "price": 12.99,
-        "description": "Classic Italian pasta dish with savory meat sauce.",
-        "img": "greek-salad.svg"
-      },
-
-      {
-        "id": 2,
-        "name": "Caprese Salad",
-        "price":  8.99,
-        "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
-        "img": "greek-salad.svg"
-      },
-
-      {
-        "id": 1,
-        "name": "Spaghetti Bolognese",
-        "price": 12.99,
-        "description": "Classic Italian pasta dish with savory meat sauce.",
-        "img": "greek-salad.svg"
-      },
-
-      {
-        "id": 2,
-        "name": "Caprese Salad",
-        "price":  8.99,
-        "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
-        "img": "greek-salad.svg"
-      },
-
-      {
-        "id": 1,
-        "name": "Spaghetti Bolognese",
-        "price": 12.99,
-        "description": "Classic Italian pasta dish with savory meat sauce.",
-        "img": "greek-salad.svg"
-      },
-
-      {
-        "id": 2,
-        "name": "Caprese Salad",
-        "price":  8.99,
-        "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
-        "img": "greek-salad.svg"
-      }
-
-    ]
-  }
+  "allmenu": [
+    {
+      "id": 1,
+      "name": "Spaghetti Bolognese",
+      "price": 12.99,
+      "description": "Classic Italian pasta dish with savory meat sauce.",
+      "img": "spaghetti-bolognese.svg"
+    },
+    {
+      "id": 2,
+      "name": "Caprese Salad",
+      "price": 8.99,
+      "description": "A refreshing salad with ripe tomatoes, mozzarella, and basil drizzled with balsamic glaze.",
+      "img": "caprese-salad.svg"
+    },
+    {
+      "id": 3,
+      "name": "Margherita Pizza",
+      "price": 10.99,
+      "description": "Classic pizza with fresh tomatoes, mozzarella, and basil.",
+      "img": "margherita-pizza.svg"
+    },
+    {
+      "id": 4,
+      "name": "Chicken Alfredo",
+      "price": 14.99,
+      "description": "Creamy Alfredo sauce with grilled chicken over fettuccine pasta.",
+      "img": "chicken-alfredo.svg"
+    },
+    {
+      "id": 5,
+      "name": "Greek Salad",
+      "price": 9.99,
+      "description": "Healthy salad with fresh vegetables, olives, and feta cheese.",
+      "img": "greek-salad.svg"
+    },
+    {
+      "id": 6,
+      "name": "Vegetarian Sushi",
+      "price": 11.99,
+      "description": "Assorted vegetable sushi rolls with soy sauce.",
+      "img": "vegetarian-sushi.svg"
+    },
+    {
+      "id": 7,
+      "name": "BBQ Ribs",
+      "price": 16.99,
+      "description": "Tender barbecue ribs with a smoky flavor.",
+      "img": "bbq-ribs.svg"
+    },
+    {
+      "id": 8,
+      "name": "Chocolate Fondue",
+      "price": 7.99,
+      "description": "Indulgent chocolate fondue with assorted dippables.",
+      "img": "chocolate-fondue.svg"
+    }
+  ]
+}

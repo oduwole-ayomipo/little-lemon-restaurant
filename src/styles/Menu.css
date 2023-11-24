@@ -1,0 +1,21 @@
+.main-menu {
+    padding: 2rem 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: flex-start;
+}
+
+.menu-banner {
+    margin-top: 6rem;
+}
+
+.menu-nav {
+    z-index: -1;
+}

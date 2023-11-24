@@ -4,23 +4,22 @@ import "../styles/Nav.css"
 import "../styles/Main.css"
 import '../components/FoodCard'
 import '../App.css'
+import '../styles/Menu.css'
 import FoodCard from './FoodCard'
 import allMenuData from '../data/allmenu.json'
 
 
-import GreekSalad from '../images/greek-salad.svg'
-import Bruschette from '../images/bruschette.svg'
-import Lemondessert from '../images/lemon-dessert.svg'
+
 
 function Menu() {
 
   return (
     <>
     <div>
-        <div className='footer-lls'></div>
+        <div className='footer-lls menu-banner'></div>
         <div className='footer-lls-overlay'>Little Lemon Menu</div>
     </div>
-    <nav className='menu'>
+    <nav className='menu-nav'>
         <ul className='nav-links'>
             <li><a href="">All</a></li>
             <li><a href="">Seafoods</a></li>
@@ -31,8 +30,8 @@ function Menu() {
         </ul>
     </nav>
     <hr />
-    <main  className='week-special'>
-        <div className='card-container'>
+    <main  className='main-menu'>
+        <div className='menu-card-container'>
             {allMenuData.allmenu.map ((menu) => (
                 <FoodCard
                     key={menu.id}
