@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ReservationForm() {
   // State variables for form fields using usestate hook
@@ -110,10 +111,10 @@ function ReservationForm() {
             />
           </label>
         </div>
-        <div>
-          <button type="">Back</button>
-        </div>
 
+        <Link to="/reservations">
+          <button type="">Back</button>
+        </Link>
         <div>
           <button type="submit">Proceed</button>
         </div>

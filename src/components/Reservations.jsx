@@ -1,9 +1,7 @@
 import "../styles/Reservations.css";
 import "../styles/Menu.css";
-import React from "react";
-import BasicForm from "./BasicForm";
-import ReservationsForm from "./ReservationsForm";
-import { Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { React } from "react";
 
 function Reservations() {
   return (
@@ -46,7 +44,10 @@ function Reservations() {
         </div>
         <div className="reservations-btn">
           <p>Contact Us</p>
-          <button>Reserve a Table</button>
+
+          <Link to="/reservations/forms">
+            <button>Reserve a Table</button>
+          </Link>
         </div>
       </div>
     </div>
