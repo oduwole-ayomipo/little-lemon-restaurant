@@ -12,43 +12,41 @@ function Reservations() {
         <div className="footer-lls menu-banner"></div>
         <div className="footer-lls-overlay">Little Lemon Bookings</div>
       </div>
-      <div className="reservation-form">
+      <div className="reservation-info">
         <div className="reservation-top">
           <div>
-            <h2>Begin your reservation</h2>
+            <h4>Little Lemon Welcomes You! 🍋</h4>
           </div>
-          <div>
-            <p></p>
-            <img />
-            <div>
-              <p>See existing reservations</p>
-            </div>
-            <div>
-              <button>Call for Info</button>
-              <button>Get Direction</button>
-            </div>
-          </div>
+          <p>
+            View existing <span>reservations</span>
+          </p>
         </div>
-        <div>
-          <div>
-            <h4>Special Offers</h4>
+        <div className="reservation-center">
+          <div className="reservation-center-A">
             <p>
-              Reserve a table at the little lemon restaurant for a maximum of 4
-              guest and get a 75% discount on all dishes (drinks and cocktails
-              are not included).
+              Reserve a table at the Little Lemon Restaurant for a maximum of 4
+              guests and enjoy an incredible 75% discount on all dishes! From
+              our appetizers to mouthwatering main courses. Please note that
+              this exclusive offer applies to all dishes,{" "}
+              <span>with the exception of drinks and cocktails. </span> <br />
             </p>
-            <p>
-              Offers valid till:
-              <span>23:45:01</span>
-            </p>
+
+            <div>
+              <p>
+                It's the perfect opportunity to gather your friends and family
+                for an unforgettable dining experience without breaking the
+                bank.
+              </p>
+            </div>
           </div>
-          <div>
+          <div className="reservations-footer">
             <hr />
             <p>4-10 tables available now</p>
           </div>
         </div>
-        <div>
-          <button>Reserve a table</button>
+        <div className="reservations-btn">
+          <p>Contact Us</p>
+          <button>Reserve a Table</button>
         </div>
       </div>
     </div>

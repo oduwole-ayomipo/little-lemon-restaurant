@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Markazi+Text:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Markazi+Text:wght@400;500;600;700&display=swap");
 
 :root {
-  --primary-yellow: #F4CE14;
-  --primary-green: #495E57;
-  --secondary-orange: #EE9972;
-  --secondary-pink: #FBDABB;
-  --secondary-grey: #EDEFEE;
+  --primary-yellow: #f4ce14;
+  --primary-green: #495e57;
+  --secondary-orange: #ee9972;
+  --secondary-pink: #fbdabb;
+  --secondary-grey: #edefee;
   --secondary-dark: #333333;
   --tertiary-grey: #848484;
 }
-
 
 * {
   box-sizing: border-box;
@@ -20,7 +19,7 @@
 body {
   width: 100vw;
   overflow-x: hidden;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   letter-spacing: -0.3px;
   background-color: var(--secondary-grey);
   color: var(--secondary-dark);
@@ -36,8 +35,8 @@ li {
 }
 
 h1 {
-  font-family: 'Markazi Text', serif;
-  color: var(--primary-yellow, #F4CE14);
+  font-family: "Markazi Text", serif;
+  color: var(--primary-yellow, #f4ce14);
   font-size: 6rem;
   font-style: normal;
   font-weight: 700;
@@ -55,7 +54,7 @@ h2 {
 }
 
 h3 {
-  color: var(--secondary-grey, #EDEFEE);
+  color: var(--secondary-grey, #edefee);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
@@ -70,17 +69,16 @@ h4 {
 }
 
 h5 {
-  color: var(--secondary-pink, #FBDABB);
+  color: var(--secondary-pink, #fbdabb);
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-
 }
 
 p {
   color: var(--secondary-dark, #333333);
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 a {
@@ -93,14 +91,14 @@ a {
 }
 
 button {
-  margin: .7rem 0 0 0 ;
-  padding: 1rem 2rem;
+  margin: 0.7rem 0 0 0;
+  padding: 0.8rem 1.3rem;
   font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   border: none;
   outline: none;
-  background-color: var(--primary-yellow, #F4CE14);
+  background-color: var(--primary-yellow, #f4ce14);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   outline: none;
 }

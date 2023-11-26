@@ -1,11 +1,96 @@
-.reservation-form {
-  padding: 3rem 12rem;
-  margin-top: 6rem;
+p,
+span {
+  font-size: 1rem;
+  line-height: 1.3rem;
 }
 
-.reservations-banner {
+h2 {
+  font-size: 1.4rem;
+  letter-spacing: -1px;
 }
 
+.reservation-info {
+  margin: 2rem 12rem;
+}
+
+.reservation-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reservation-top > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.3rem;
+  padding: 1rem 0;
+}
+
+.reservation-top > div > h4 {
+  font-size: 1.3rem;
+}
+
+.reservation-top > p > span {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.reservation-top > p span:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.reservation-center {
+  padding: 02rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.reservation-center-A {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.reservation-center-A > p span {
+  color: red;
+  font-weight: 500;
+}
+
+.reservation-center-A > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.reservations-footer > p {
+  text-align: center;
+  margin: 0.8rem;
+  opacity: 0.7;
+}
+
+.reservations-btn {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.reservations-btn p {
+  margin: 0.7rem 0 0 0;
+  padding: 0.8rem 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0.6rem;
+  border: 1px solid var(--primary-yellow);
+  outline: none;
+  outline: none;
+}
+
+.reservations-btn p:hover {
+  background-color: var(--primary-yellow);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 .reservations-basic-info {
   border: 1px solid var(--primary-yellow);
   margin-bottom: 2rem;
