@@ -1,9 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import chef from '../images/chef.jpg'
 import '../styles/Footer.css'
 
 function Footer() {
+
+  const handleNavLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer>
       <div>
@@ -18,12 +23,12 @@ function Footer() {
             DoorMat <br/> Navigation
           </div>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/menu">Menu</Link></li>
-            <li><Link to="/reservations">Reservations</Link></li>
-            <li><Link to="/order-online">Order Online</Link></li>
-            <li><Link to="/login">Login</Link></li>
+          <li><NavLink to="/" activeClassName="active" onClick={handleNavLinkClick}>Home</NavLink></li>
+        <li><NavLink to="/about" activeClassName="active" onClick={handleNavLinkClick}>About</NavLink></li>
+        <li><NavLink to="/menu" activeClassName="active" onClick={handleNavLinkClick}>Menu</NavLink></li>
+        <li><NavLink to="/reservations" activeClassName="active" onClick={handleNavLinkClick}>Reservations</NavLink></li>
+        <li><NavLink to="/order-online" activeClassName="active" onClick={handleNavLinkClick}>Order Online</NavLink></li>
+        <li><NavLink to="/login" activeClassName="active" onClick={handleNavLinkClick}>Login</NavLink></li>
           </ul>
         </div>
         <div className='footer-column '>

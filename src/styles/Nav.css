@@ -28,14 +28,14 @@ nav ul {
     flex: 1 0 0;
 }
 
+
 nav .nav-links a {
     padding: 0.5rem;
 }
 
-nav .nav-links a:hover,
-nav .nav-links a:active {
+nav .nav-links li a:hover,
+nav .nav-links li a.active {
     font-weight: 700;
-    color: var(--primary-green);
+    color: var(--primary-yellow);
     transition: ease-in-out;
 }
-
