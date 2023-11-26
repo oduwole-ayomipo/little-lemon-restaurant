@@ -1,0 +1,13 @@
+.reservation-form {
+  padding: 3rem 12rem;
+  margin-top: 6rem;
+}
+
+.reservations-banner {
+}
+
+.reservations-basic-info {
+  border: 1px solid var(--primary-yellow);
+  margin-bottom: 2rem;
+  padding: 2rem;
+}

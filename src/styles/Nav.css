@@ -1,41 +1,40 @@
 nav {
-    z-index: 99;
-    width: 100%;
-    padding: 0 12rem 0 12rem;
-    display: flex;
-    height: 6rem;
-    justify-content: center;
-    align-items: center;
-    gap: 7rem;
-    position: fixed;
-    background-color: var(--secondary-grey);
-    transition: 0.4s ease-in-out;
+  z-index: 99;
+  width: 100%;
+  padding: 0 12rem 0 12rem;
+  display: flex;
+  height: 6rem;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+  position: fixed;
+  background-color: var(--secondary-grey);
+  transition: 0.4s ease-in-out;
 }
 
 .menu-nav {
-    position: relative;
+  position: relative;
 }
 
 .menu-nav ul li a {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-transform: uppercase;
-    flex: 1 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  flex: 1 0 0;
 }
 
-
 nav .nav-links a {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 nav .nav-links li a:hover,
 nav .nav-links li a.active {
-    font-weight: 700;
-    color: var(--primary-yellow);
-    transition: ease-in-out;
+  font-weight: 700;
+  color: var(--primary-yellow);
+  transition: ease-in-out;
 }
