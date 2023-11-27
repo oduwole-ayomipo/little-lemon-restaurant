@@ -1,126 +1,169 @@
-import React from "react";
-import { useState } from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import { Icon } from "@iconify/react";
+import * as Yup from "yup";
+import "../App.css";
+import ReservationsForm from "./ReservationsForm";
 
-function ReservationForm() {
-  // State variables for form fields using usestate hook
-  const [BasicFormData, setBasicFormData] = useState({
-    firstName: "",
-    lastName: "",
-    prefix: "",
-    mobileNumber: "",
-    alternateMobileNumber: "",
-    emailAddress: "",
+function BasicForm() {
+  const [loadReservationForm, setLoadReservationForm] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  //Formik
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      mobileNumber: "",
+      emailAddress: "",
+    },
+    onSubmit: (values) => {
+      console.log("onSubmit", values);
+      setLoadReservationForm(true);
+      setFormSubmitted(true);
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string()
+        .required("Field cannot be empty")
+        .min(3, "First name must be more than 3 characters"),
+
+      lastName: Yup.string()
+        .required("Field cannot be empty")
+        .min(3, "First name must be more than 3 characters"),
+      mobileNumber: Yup.string()
+        .required("Field cannot be empty")
+        .max(11, "Phone number must be at least 6 characters"),
+      emailAddress: Yup.string()
+        .required(" Field  cannot be empty")
+        .email("Please provide a valid email"),
+    }),
   });
 
-  // Function to handle input changes and update state
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setBasicFormData({
-      ...BasicFormData,
-      [name]: value,
-    });
+  const handleLinkClick = () => {
+    window.scroll(0, 0);
   };
-
-  // Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log("Form submitted with data:", BasicFormData);
-  };
-
-  //if form subit is valid, route to the reservations form via the submit btn.... link the submitbnt to reservations form
   return (
-    <div className="reservations-basic-info">
-      <form onSubmit={handleSubmit}>
+    <>
+      <div>
+        <div className="footer-lls menu-banner"></div>
+        <div className="footer-lls-overlay">Little Lemon Bookings</div>
+      </div>
+      <div className="reservations-basic-info">
         <div>
-          <label>
-            First Name:
-            <input
-              type="text"
-              name="firstName"
-              value={BasicFormData.firstName}
-              onChange={handleChange}
-            />
-          </label>
+          <li>1. BASIC INFORMATION</li>
         </div>
-        <div>
-          <label>
-            Last Name:
-            <input
-              type="text"
-              name="lastName"
-              value={BasicFormData.lastName}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Prefix:
-            <input
-              type="number"
-              name="prefix"
-              value={BasicFormData.prefix}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Mobile Number:
-            <input
-              type="number"
-              name="mobileNumber"
-              value={BasicFormData.mobileNumber}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Prefix:
-            <input
-              type="number"
-              name="prefix"
-              value={BasicFormData.prefix}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Alternate Mobile Number:
-            <input
-              type="number"
-              name="alternateMobileNumber"
-              value={BasicFormData.alternateMobileNumber}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Email Adress:
-            <input
-              type="text"
-              name="emailAddress"
-              value={BasicFormData.emailAddress}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
+        <form
+          className="reservations-basic-form"
+          onSubmit={formik.handleSubmit}
+        >
+          <div>
+            <label>
+              First Name:
+              <input
+                type="text"
+                name="firstName"
+                value={formik.values.firstName}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                disabled={formSubmitted}
+              />
+              <div>
+                <p>
+                  {formik.errors.firstName &&
+                    formik.touched.firstName &&
+                    formik.errors.firstName}
+                </p>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label>
+              Last Name:
+              <input
+                type="text"
+                name="lastName"
+                value={formik.values.lastName}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                disabled={formSubmitted}
+              />
+              <div>
+                <p>
+                  {formik.errors.lastName &&
+                    formik.touched.lastName &&
+                    formik.errors.lastName}
+                </p>
+              </div>
+            </label>
+          </div>
 
-        <Link to="/reservations">
-          <button type="">Back</button>
-        </Link>
+          <div>
+            <label>
+              Mobile Number:
+              <input
+                type="number"
+                name="mobileNumber"
+                value={formik.errors.mobileNumber}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                disabled={formSubmitted}
+              />
+              <div>
+                <p>
+                  {formik.errors.mobileNumber &&
+                    formik.touched.mobileNumber &&
+                    formik.errors.mobileNumber}
+                </p>
+              </div>
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Email Adress:
+              <input
+                type="text"
+                name="emailAddress"
+                value={formik.values.emailAddress}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                disabled={formSubmitted}
+              />
+              <div>
+                <p>
+                  {formik.errors.emailAddress &&
+                    formik.touched.emailAddress &&
+                    formik.errors.emailAddress}
+                </p>
+              </div>
+            </label>
+          </div>
+
+          <div className="reservations-basic-form-btn">
+            <Link to="/reservations">
+              <Icon
+                icon="fluent-mdl2:navigate-back"
+                font-size="32"
+                color="#f4ce14"
+                onClick={handleLinkClick}
+              />
+            </Link>
+            <button className="active-btn" type="submit">
+              Proceed
+            </button>
+          </div>
+        </form>
         <div>
-          <button type="submit">Proceed</button>
+          <li>2. BOOKING DETAILS</li>
+          {loadReservationForm && <ReservationsForm />}
         </div>
-      </form>
-    </div>
+        <div>
+          <li>3. CONFIRMATION</li>
+        </div>
+      </div>
+    </>
   );
 }
 
-export default ReservationForm;
+export default BasicForm;

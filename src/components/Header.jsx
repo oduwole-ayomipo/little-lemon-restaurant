@@ -19,7 +19,7 @@ function Header() {
           </h3>
           <div className="header-btn">
             <Link to="/reservations">
-              <button>Reserve a Table</button>
+              <button className="active-btn">Reserve a Table</button>
             </Link>
           </div>
         </div>

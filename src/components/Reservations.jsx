@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { React } from "react";
 
 function Reservations() {
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div>
       <div>
@@ -46,7 +49,9 @@ function Reservations() {
           <p>Contact Us</p>
 
           <Link to="/reservations/forms">
-            <button>Reserve a Table</button>
+            <button className="active-btn" onClick={handleLinkClick}>
+              Reserve a Table
+            </button>
           </Link>
         </div>
       </div>
