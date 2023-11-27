@@ -27,13 +27,12 @@ function BasicForm() {
       firstName: Yup.string()
         .required("Field cannot be empty")
         .min(3, "First name must be more than 3 characters"),
-
       lastName: Yup.string()
         .required("Field cannot be empty")
-        .min(3, "First name must be more than 3 characters"),
+        .min(3, "Last name must be more than 3 characters"),
       mobileNumber: Yup.string()
         .required("Field cannot be empty")
-        .max(11, "Phone number must be at least 6 characters"),
+        .max(11, "Phone number must be more than 11 digits"),
       emailAddress: Yup.string()
         .required(" Field  cannot be empty")
         .email("Please provide a valid email"),
@@ -59,7 +58,7 @@ function BasicForm() {
         >
           <div>
             <label>
-              First Name:
+              <h3 aria-roledescription="label">First Name</h3>
               <input
                 type="text"
                 name="firstName"
@@ -68,18 +67,19 @@ function BasicForm() {
                 onBlur={formik.handleBlur}
                 disabled={formSubmitted}
               />
-              <div>
-                <p>
-                  {formik.errors.firstName &&
-                    formik.touched.firstName &&
-                    formik.errors.firstName}
-                </p>
-              </div>
             </label>
+            <div>
+              <p>
+                {formik.errors.firstName &&
+                  formik.touched.firstName &&
+                  formik.errors.firstName}
+              </p>
+            </div>
           </div>
           <div>
             <label>
-              Last Name:
+              <h3 aria-roledescription="label">Last Name</h3>
+
               <input
                 type="text"
                 name="lastName"
@@ -88,19 +88,19 @@ function BasicForm() {
                 onBlur={formik.handleBlur}
                 disabled={formSubmitted}
               />
-              <div>
-                <p>
-                  {formik.errors.lastName &&
-                    formik.touched.lastName &&
-                    formik.errors.lastName}
-                </p>
-              </div>
             </label>
+            <div>
+              <p>
+                {formik.errors.lastName &&
+                  formik.touched.lastName &&
+                  formik.errors.lastName}
+              </p>
+            </div>
           </div>
 
           <div>
             <label>
-              Mobile Number:
+              <h3 aria-roledescription="label">Mobile Number</h3>
               <input
                 type="number"
                 name="mobileNumber"
@@ -109,19 +109,20 @@ function BasicForm() {
                 onBlur={formik.handleBlur}
                 disabled={formSubmitted}
               />
-              <div>
-                <p>
-                  {formik.errors.mobileNumber &&
-                    formik.touched.mobileNumber &&
-                    formik.errors.mobileNumber}
-                </p>
-              </div>
             </label>
+            <div>
+              <p>
+                {formik.errors.mobileNumber &&
+                  formik.touched.mobileNumber &&
+                  formik.errors.mobileNumber}
+              </p>
+            </div>
           </div>
 
           <div>
             <label>
-              Email Adress:
+              <h3 aria-roledescription="label">Email Adress</h3>
+
               <input
                 type="text"
                 name="emailAddress"
@@ -130,14 +131,14 @@ function BasicForm() {
                 onBlur={formik.handleBlur}
                 disabled={formSubmitted}
               />
-              <div>
-                <p>
-                  {formik.errors.emailAddress &&
-                    formik.touched.emailAddress &&
-                    formik.errors.emailAddress}
-                </p>
-              </div>
             </label>
+            <div>
+              <p>
+                {formik.errors.emailAddress &&
+                  formik.touched.emailAddress &&
+                  formik.errors.emailAddress}
+              </p>
+            </div>
           </div>
 
           <div className="reservations-basic-form-btn">
@@ -149,13 +150,14 @@ function BasicForm() {
                 onClick={handleLinkClick}
               />
             </Link>
-            <button className="active-btn" type="submit">
+            <button className="active-btn basic-info" type="submit">
               Proceed
             </button>
           </div>
         </form>
         <div>
           <li>2. BOOKING DETAILS</li>
+          <ReservationsForm />
           {loadReservationForm && <ReservationsForm />}
         </div>
         <div>
