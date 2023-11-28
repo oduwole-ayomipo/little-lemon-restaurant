@@ -5,9 +5,7 @@ import "../styles/Reservations.css";
 import ConfirmForm from "./ConfirmForm";
 
 const ReservationForm = () => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const [loadConfirmation, setLoadConfirmation] = useState(false);
-
   const initialValues = {
     resDate: "",
     resTime: "",
@@ -28,7 +26,6 @@ const ReservationForm = () => {
   const onSubmit = (values) => {
     // Handle form submission logic here
     console.log("Form submitted with values:", values);
-    setFormSubmitted(true);
     setLoadConfirmation(true);
   };
 
@@ -50,7 +47,6 @@ const ReservationForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.resDate}
-            disabled={formSubmitted}
           />
           <p>
             {formik.errors.resDate &&
@@ -70,24 +66,12 @@ const ReservationForm = () => {
             <option value="Default" hidden>
               Select to choose
             </option>
-            <option value="17:00" disabled={formSubmitted}>
-              17:00
-            </option>
-            <option value="18:00" disabled={formSubmitted}>
-              18:00
-            </option>
-            <option value="19:00" disabled={formSubmitted}>
-              19:00
-            </option>
-            <option value="20:00" disabled={formSubmitted}>
-              20:00
-            </option>
-            <option value="21:00" disabled={formSubmitted}>
-              21:00
-            </option>
-            <option value="22:00" disabled={formSubmitted}>
-              22:00
-            </option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+            <option value="22:00">22:00</option>
           </select>
           <p>
             {formik.errors.resTime &&
@@ -108,7 +92,6 @@ const ReservationForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.guests}
-            disabled={formSubmitted}
           />
           <p>
             {formik.errors.guests &&
@@ -129,12 +112,8 @@ const ReservationForm = () => {
             <option value="Default" hidden>
               Select to choose
             </option>
-            <option value="Birthday" disabled={formSubmitted}>
-              Birthday
-            </option>
-            <option value="Anniversary" disabled={formSubmitted}>
-              Anniversary
-            </option>
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
           </select>
           <p>
             {formik.errors.occasion &&
@@ -142,6 +121,7 @@ const ReservationForm = () => {
               formik.errors.occasion}
           </p>
         </div>
+
         <div className="reservations-basic-form-btn">
           <button className="active-btn basic-info" type="submit">
             Make Your reservation

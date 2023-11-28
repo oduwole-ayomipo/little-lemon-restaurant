@@ -25,7 +25,7 @@ function Footer() {
             <li>
               <NavLink
                 to="/"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={handleNavLinkClick}
               >
                 Home
@@ -34,7 +34,7 @@ function Footer() {
             <li>
               <NavLink
                 to="/about"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={handleNavLinkClick}
               >
                 About
@@ -43,7 +43,7 @@ function Footer() {
             <li>
               <NavLink
                 to="/menu"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={handleNavLinkClick}
               >
                 Menu
@@ -52,7 +52,7 @@ function Footer() {
             <li>
               <NavLink
                 to="/reservations"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={handleNavLinkClick}
               >
                 Reservations
@@ -61,7 +61,7 @@ function Footer() {
             <li>
               <NavLink
                 to="/order-online"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={handleNavLinkClick}
               >
                 Order Online
@@ -70,7 +70,7 @@ function Footer() {
             <li>
               <NavLink
                 to="/login"
-                activeClassName="active"
+                activeclassname="active"
                 onClick={handleNavLinkClick}
               >
                 Login
