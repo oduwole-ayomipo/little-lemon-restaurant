@@ -52,22 +52,22 @@ function BasicForm() {
         <div>
           <li>1. BASIC INFORMATION</li>
         </div>
+
         <form
           className="reservations-basic-form"
           onSubmit={formik.handleSubmit}
         >
           <div>
-            <label>
-              <h3 aria-roledescription="label">First Name</h3>
-              <input
-                type="text"
-                name="firstName"
-                value={formik.values.firstName}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                disabled={formSubmitted}
-              />
-            </label>
+            <label htmlFor="firstName">First Name </label>
+            <input
+              type="text"
+              name="firstName"
+              value={formik.values.firstName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              disabled={formSubmitted}
+            />
+
             <div>
               <p>
                 {formik.errors.firstName &&
@@ -77,18 +77,17 @@ function BasicForm() {
             </div>
           </div>
           <div>
-            <label>
-              <h3 aria-roledescription="label">Last Name</h3>
+            <label htmlFor="lastName">Last Name </label>
 
-              <input
-                type="text"
-                name="lastName"
-                value={formik.values.lastName}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                disabled={formSubmitted}
-              />
-            </label>
+            <input
+              type="text"
+              name="lastName"
+              value={formik.values.lastName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              disabled={formSubmitted}
+            />
+
             <div>
               <p>
                 {formik.errors.lastName &&
@@ -99,17 +98,15 @@ function BasicForm() {
           </div>
 
           <div>
-            <label>
-              <h3 aria-roledescription="label">Mobile Number</h3>
-              <input
-                type="number"
-                name="mobileNumber"
-                value={formik.errors.mobileNumber}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                disabled={formSubmitted}
-              />
-            </label>
+            <label htmlFor="mobileNumber">Mobile Number</label>
+            <input
+              type="number"
+              name="mobileNumber"
+              value={formik.errors.mobileNumber}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              disabled={formSubmitted}
+            />
             <div>
               <p>
                 {formik.errors.mobileNumber &&
@@ -120,18 +117,17 @@ function BasicForm() {
           </div>
 
           <div>
-            <label>
-              <h3 aria-roledescription="label">Email Adress</h3>
+            <label htmlFor="emailAddress"> Email Address </label>
 
-              <input
-                type="text"
-                name="emailAddress"
-                value={formik.values.emailAddress}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                disabled={formSubmitted}
-              />
-            </label>
+            <input
+              type="text"
+              name="emailAddress"
+              value={formik.values.emailAddress}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              disabled={formSubmitted}
+            />
+
             <div>
               <p>
                 {formik.errors.emailAddress &&
@@ -145,7 +141,7 @@ function BasicForm() {
             <Link to="/reservations">
               <Icon
                 icon="fluent-mdl2:navigate-back"
-                font-size="32"
+                width="32"
                 color="#f4ce14"
                 onClick={handleLinkClick}
               />
@@ -157,11 +153,7 @@ function BasicForm() {
         </form>
         <div>
           <li>2. BOOKING DETAILS</li>
-          <ReservationsForm />
           {loadReservationForm && <ReservationsForm />}
-        </div>
-        <div>
-          <li>3. CONFIRMATION</li>
         </div>
       </div>
     </>

@@ -103,6 +103,7 @@ h2 {
 }
 
 .reservations-basic-form {
+  position: relative;
   border: 1px solid var(--primary-green);
   border-radius: 0.6rem;
   padding: 2rem;
@@ -127,7 +128,7 @@ h2 {
   width: 100%;
 }
 
-.reservations-basic-form h3 {
+.reservations-basic-form label {
   color: var(--tertiary-grey);
   font-size: 0.9rem;
   position: absolute;
@@ -137,17 +138,21 @@ h2 {
   letter-spacing: -0.5px;
   font-weight: 700;
 }
-.reservations-basic-form input {
+.reservations-basic-form input,
+.reservations-basic-form select {
   width: 100%;
   border: 1px solid var(--primary-green);
   outline: none;
   font-size: 1.1rem;
-  line-height: 4rem;
-  padding-left: 2.2rem;
+  height: 4rem;
+  padding: 0 2.2rem;
   border-radius: 1rem;
-  fill: none;
   background-color: transparent;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
+
 .reservations-basic-form input:focus,
 .reservations-basic- input:active {
   background-color: transparent;
