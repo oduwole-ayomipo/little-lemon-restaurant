@@ -1,70 +1,66 @@
 footer {
-    width: 100%;
-    position: relative;
-    color: var(--secondary-pink);
+  width: 100%;
+  position: relative;
+  color: var(--secondary-pink);
 }
 
 footer div {
-    position: relative;
+  position: relative;
 }
 
 .footer-content {
-    background-color: var(--primary-green);
-    padding: 2rem 18rem 2rem 12rem;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
+  background-color: var(--primary-green);
+  padding: 2rem 18rem 2rem 12rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .footer-lls {
-    width: 100vw;
-    background-image: url(../images/restaurant3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh;
-    object-fit: contain;
+  width: 100vw;
+  background-image: url(../images/restaurant3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  object-fit: contain;
 }
 
 .footer-lls-overlay {
-    margin-top: -50vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.582);
-    height: 50vh;
-    color: var(--secondary-orange);
-    font-size: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    letter-spacing: -5px;
+  margin-top: -50vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.582);
+  height: 50vh;
+  color: var(--secondary-orange);
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  letter-spacing: -5px;
 }
 
-
-
-.footer-chef-img{
-    width: 19%;
-    border-radius: 1rem;
+.footer-chef-img {
+  width: 19%;
+  border-radius: 1rem;
 }
 
-
-
-footer .footer-column ul li{
-    padding: 0.1rem 0;
+footer .footer-column ul li {
+  padding: 0.1rem 0;
 }
 
 footer .footer-column ul li a {
-    color: var(--secondary-grey);
-    font-weight: 400;
-    font-size: 0.9rem ;
+  color: var(--secondary-grey);
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 footer .footer-column ul li a:hover {
-    color: var(--secondary-pink);
-    font-weight: 500;
+  color: var(--secondary-pink);
+  font-weight: 500;
 }
 
 .footer-heading {
-    margin: 0 0 1rem 0;
+  margin: 0 0 1rem 0;
 }
