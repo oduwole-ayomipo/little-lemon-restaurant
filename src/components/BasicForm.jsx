@@ -152,7 +152,11 @@ function BasicForm() {
                 onClick={handleLinkClick}
               />
             </Link>
-            <button className="active-btn basic-info" type="submit">
+            <button
+              className="active-btn basic-info"
+              disabled={formSubmitted}
+              type="submit"
+            >
               Proceed
             </button>
           </div>

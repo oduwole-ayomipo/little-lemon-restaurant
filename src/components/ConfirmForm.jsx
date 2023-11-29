@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 function ConfirmForm({ basicFormData, reservationFormData }) {
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [confirmedForm, setConfirmedForm] = useState();
 
   const formik = useFormik({
@@ -13,11 +14,12 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
     onSubmit: (values) => {
       setConfirmedForm(true);
       console.log("Agreed", values);
+      setFormSubmitted(true);
     },
     validationSchema: Yup.object({
       agreements: Yup.bool().oneOf(
         [true],
-        "you need to accept the terms and conditions "
+        "You need to accept the Terms and Conditions "
       ),
     }),
   });
@@ -25,36 +27,64 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
     <>
       <div>
         <div className="confirm-form">
-          <li>CONFIRM YOUR RESERVATION</li>
+          <li>KINDLY CONFIRM YOUR RESERVATION</li>
         </div>
         <form
           className="reservations-basic-form"
           onSubmit={formik.handleSubmit}
         >
-          <div>
-            <div>First Name: {basicFormData?.firstName}</div>
-            <div>Last Name: {basicFormData?.firstName}</div>
-            <div>Phone Number: {basicFormData?.mobileNumber}</div>
-            <div>Email Address: {basicFormData?.emailAddress}</div>
+          <div className="output">
+            <div>
+              <h6>First Name:</h6>
+              <span>{basicFormData?.firstName}</span>
+            </div>
+            <div>
+              <h6>Last Name:</h6>
+              <span>{basicFormData?.lastName}</span>
+            </div>
+            <div>
+              <h6>Phone Number:</h6>
+              <span> {basicFormData?.mobileNumber}</span>
+            </div>
+            <div>
+              <h6>Email Address:</h6>
+              <span> {basicFormData?.emailAddress}</span>
+            </div>
           </div>
-          <div>
-            <div> Date: {reservationFormData?.resDate}</div>
-            <div> Time: {reservationFormData?.resTime}</div>
-            <div> Guests: {reservationFormData?.guests}</div>
-            <div> Occassion: {reservationFormData?.occasion}</div>
+
+          <div className="divider"></div>
+
+          <div className="output">
+            <div>
+              <h6>Date:</h6>
+              <span> {reservationFormData?.resDate}</span>
+            </div>
+            <div>
+              <h6>Time:</h6>
+              <span> {reservationFormData?.resTime}</span>
+            </div>
+            <div>
+              <h6>Guests:</h6>
+              <span> {reservationFormData?.guests}</span>
+            </div>
+            <div>
+              <h6>Occassion:</h6>
+              <span>{reservationFormData?.occasion}</span>
+            </div>
           </div>
-          <div>
-            <input
-              className="agreements-checkbox"
-              type="checkbox"
-              name="agreements"
-              id="agreements"
-              value={formik.values.agreements}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
+          <div className="agreements-container">
             <label className="agreements-label" htmmlFor="agreements">
-              I agree to the terms and conditions of Little Lemon Restaurant
+              <input
+                className="agreements-checkbox"
+                type="checkbox"
+                name="agreements"
+                id="agreements"
+                disabled={formSubmitted}
+                value={formik.values.agreements}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              I agree to the Terms and Conditions of Little Lemon Restaurant
             </label>
             <p>
               {formik.errors.agreements &&
@@ -62,16 +92,25 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
                 formik.errors.agreements}
             </p>
           </div>
-
-          <button className="active-btn" type="submit">
-            Confirm
-          </button>
+          <div>
+            <button
+              className="active-btn"
+              disabled={formSubmitted}
+              type="submit"
+            >
+              Confirm
+            </button>
+          </div>
         </form>
         <div>
           {confirmedForm && (
             <p>
               Thank you, Your reservation has been made. Kindly visit your email
-              for your bookings receipt
+              for your bookings receipt! Oh, No not yet, i am yet to code that{" "}
+              <br />
+              This and the confirmations component is going to be a modal popup
+              for improved ux <br /> Also the loading spinner would look
+              prettier too
             </p>
           )}
         </div>

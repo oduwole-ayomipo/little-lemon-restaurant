@@ -119,12 +119,13 @@ h2 {
 }
 
 .reservations-basic-form > div:last-child {
-  padding: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  gap: 3rem;
   width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .reservations-basic-form label {
@@ -146,22 +147,10 @@ h2 {
   height: 4rem;
   padding: 0 2.2rem;
   border-radius: 1rem;
-  background-color: transparent;
+  background-color: var(--secondary-grey);
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-}
-
-.reservations-basic-form fieldset {
-  height: 10px;
-}
-
-.reservations-basic-form .agreements-label {
-  color: var(--tertiary-grey);
-  font-size: 0.9rem;
-  letter-spacing: -0.5px;
-  font-weight: 700;
-  position: relative;
 }
 
 .reservations-basic-form input:focus,
@@ -174,94 +163,158 @@ h2 {
   font-size: 0.8rem;
 }
 
-/* Laoding Spinner Animation */
-.loading-spinner {
-  display: absolute;
+.reservations-basic-form .divider {
+  width: 1px;
+  align-self: center;
+  background-color: var(--primary-yellow);
+}
+
+.reservations-basic-form .output > div {
   display: flex;
-  align-items: center;
-  cursor: not-allowed;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
 }
-.lds-roller {
-  display: inline-block;
+.reservations-basic-form .output > div h6 {
+  color: var(--tertiary-grey);
+  font-size: 0.8rem;
+  padding: 0.5rem 0.7rem;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.reservations-basic-form .output > div span {
+  font-size: 0.8rem;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--secondary-dark);
+  padding: 0.3rem 0.8rem;
+  width: 50%;
+  align-self: flex-start;
+}
+
+.reservations-basic-form .agreements-container {
+  width: 100%;
+  padding: 1.5rem 0.7rem;
+}
+
+.reservations-basic-form .agreements-container > p {
+  padding: 0 0.7rem;
+}
+
+.reservations-basic-form .agreements-label {
+  margin: 0;
+  padding: 0;
   position: relative;
-  width: 80px;
-  height: 80px;
 }
-.lds-roller div {
-  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  transform-origin: 40px 40px;
+
+.reservations-basic-form .agreements-checkbox {
+  margin: 0 1rem 0 0;
 }
-.lds-roller div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--primary-green);
-  margin: -4px 0 0 -4px;
-}
-.lds-roller div:nth-child(1) {
-  animation-delay: -0.036s;
-}
-.lds-roller div:nth-child(1):after {
-  top: 63px;
-  left: 63px;
-}
-.lds-roller div:nth-child(2) {
-  animation-delay: -0.072s;
-}
-.lds-roller div:nth-child(2):after {
-  top: 68px;
-  left: 56px;
-}
-.lds-roller div:nth-child(3) {
-  animation-delay: -0.108s;
-}
-.lds-roller div:nth-child(3):after {
-  top: 71px;
-  left: 48px;
-}
-.lds-roller div:nth-child(4) {
-  animation-delay: -0.144s;
-}
-.lds-roller div:nth-child(4):after {
-  top: 72px;
-  left: 40px;
-}
-.lds-roller div:nth-child(5) {
-  animation-delay: -0.18s;
-}
-.lds-roller div:nth-child(5):after {
-  top: 71px;
-  left: 32px;
-}
-.lds-roller div:nth-child(6) {
-  animation-delay: -0.216s;
-}
-.lds-roller div:nth-child(6):after {
-  top: 68px;
-  left: 24px;
-}
-.lds-roller div:nth-child(7) {
-  animation-delay: -0.252s;
-}
-.lds-roller div:nth-child(7):after {
-  top: 63px;
-  left: 17px;
-}
-.lds-roller div:nth-child(8) {
-  animation-delay: -0.288s;
-}
-.lds-roller div:nth-child(8):after {
-  top: 56px;
-  left: 12px;
-}
-@keyframes lds-roller {
+
+/* Laoding Spinner Animation */
+@keyframes ldio-ttdt4w62njc {
   0% {
-    transform: rotate(0deg);
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    opacity: 0;
   }
 }
+.loadingio-spinner-spinner-bwu9f7outd {
+  margin: 0;
+  padding: 0;
+}
+.ldio-ttdt4w62njc div {
+  left: 49.5px;
+  top: 24px;
+  position: absolute;
+  animation: ldio-ttdt4w62njc linear 0.684931506849315s infinite;
+  background: #333333;
+  width: 1px;
+  height: 12px;
+  border-radius: 0px / 0px;
+  transform-origin: 0.5px 26px;
+}
+.ldio-ttdt4w62njc div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -0.6278538812785388s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -0.5707762557077626s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.5136986301369864s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.4566210045662101s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.3995433789954338s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.3424657534246575s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.2853881278538813s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.22831050228310504s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.17123287671232876s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.11415525114155252s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.05707762557077626s;
+  background: #333333;
+}
+.ldio-ttdt4w62njc div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+  background: #333333;
+}
+.loadingio-spinner-spinner-bwu9f7outd {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.ldio-ttdt4w62njc {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(0.64);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-ttdt4w62njc div {
+  box-sizing: content-box;
+}
+/* generated by https://loading.io/ */

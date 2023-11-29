@@ -20,7 +20,7 @@ function ReservationForm({ basicFormValues }) {
     resDate: Yup.date().required("Date is required"),
     resTime: Yup.string().required("Time is required"),
     guests: Yup.number()
-      .required("Number of guests is requsetFormSubmittedired")
+      .required("Number of guests is required")
       .min(1, "Must be at least 1")
       .max(10, "Cannot exceed 10"),
     occasion: Yup.string().required("Occasion is required"),
@@ -154,28 +154,36 @@ function ReservationForm({ basicFormValues }) {
               formik.errors.occasion}
           </p>
         </div>
-        <div className="loading-spinner">
+
+        <div className="reservations-basic-form-btn">
           {loadingSpinner && (
-            <div class="lds-roller">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <div class="loadingio-spinner-spinner-bwu9f7outd">
+              <div class="ldio-ttdt4w62njc">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </div>
           )}
-        </div>
-        <div className="reservations-basic-form-btn">
-          <button
-            className="active-btn basic-info"
-            disabled={formSubmitted}
-            type="submit"
-          >
-            Make Reservation
-          </button>
+
+          <div>
+            <button
+              className="active-btn basic-info"
+              disabled={formSubmitted}
+              type="submit"
+            >
+              Make Reservation
+            </button>
+          </div>
         </div>
       </form>
       <div>
