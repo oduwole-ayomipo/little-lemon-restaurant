@@ -62,6 +62,7 @@ function BasicForm() {
           <div>
             <label htmlFor="firstName">First Name </label>
             <input
+              className="input"
               type="text"
               name="firstName"
               value={formik.values.firstName}
@@ -82,6 +83,7 @@ function BasicForm() {
             <label htmlFor="lastName">Last Name </label>
 
             <input
+              className="input"
               type="text"
               name="lastName"
               value={formik.values.lastName}
@@ -102,6 +104,7 @@ function BasicForm() {
           <div>
             <label htmlFor="mobileNumber">Mobile Number</label>
             <input
+              className="input"
               type="number"
               name="mobileNumber"
               value={formik.errors.mobileNumber}
@@ -122,6 +125,7 @@ function BasicForm() {
             <label htmlFor="emailAddress"> Email Address </label>
 
             <input
+              className="input"
               type="text"
               name="emailAddress"
               value={formik.values.emailAddress}

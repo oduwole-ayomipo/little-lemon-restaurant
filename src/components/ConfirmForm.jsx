@@ -1,13 +1,17 @@
-import { React } from "react";
+import { React, useState } from "react";
+import "../styles/Reservations.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 function ConfirmForm({ basicFormData, reservationFormData }) {
+  const [confirmedForm, setConfirmedForm] = useState();
+
   const formik = useFormik({
     initialValues: {
       agreements: false,
     },
     onSubmit: (values) => {
+      setConfirmedForm(true);
       console.log("Agreed", values);
     },
     validationSchema: Yup.object({
@@ -18,31 +22,30 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
     }),
   });
   return (
-    <div>
+    <>
       <div>
-        <div>
-          Kindly confirm your booking details, at little lemon out job is to
-          serve you right!
+        <div className="confirm-form">
+          <li>CONFIRM YOUR RESERVATION</li>
         </div>
-        <div>
-          Full Name: {basicFormData?.firstName} {basicFormData?.lastName}
-        </div>
-        <div>Phone Number: {basicFormData?.mobileNumber}</div>
-        <div>Email Address: {basicFormData?.emailAddress}</div>
-      </div>
-      <div>
-        <div>Reserved Date: {reservationFormData.resDate}</div>
-        <div>Reserved Time: {reservationFormData.resTime}</div>
-        <div>Number of Guests: {reservationFormData.guests}</div>
-        <div>Type of Occassion: {reservationFormData.occasion}</div>
-      </div>
-      <div>
-        <form onSubmit={formik.handleSubmit}>
+        <form
+          className="reservations-basic-form"
+          onSubmit={formik.handleSubmit}
+        >
           <div>
-            <label htmmlFor="agreements">
-              I agree to the terms and conditions of Little Lemon Restaurant
-            </label>
-            <fieldset
+            <div>First Name: {basicFormData?.firstName}</div>
+            <div>Last Name: {basicFormData?.firstName}</div>
+            <div>Phone Number: {basicFormData?.mobileNumber}</div>
+            <div>Email Address: {basicFormData?.emailAddress}</div>
+          </div>
+          <div>
+            <div> Date: {reservationFormData?.resDate}</div>
+            <div> Time: {reservationFormData?.resTime}</div>
+            <div> Guests: {reservationFormData?.guests}</div>
+            <div> Occassion: {reservationFormData?.occasion}</div>
+          </div>
+          <div>
+            <input
+              className="agreements-checkbox"
               type="checkbox"
               name="agreements"
               id="agreements"
@@ -50,6 +53,9 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
+            <label className="agreements-label" htmmlFor="agreements">
+              I agree to the terms and conditions of Little Lemon Restaurant
+            </label>
             <p>
               {formik.errors.agreements &&
                 formik.touched.agreements &&
@@ -57,10 +63,20 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
             </p>
           </div>
 
-          <button type="submit">Confirm</button>
+          <button className="active-btn" type="submit">
+            Confirm
+          </button>
         </form>
+        <div>
+          {confirmedForm && (
+            <p>
+              Thank you, Your reservation has been made. Kindly visit your email
+              for your bookings receipt
+            </p>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

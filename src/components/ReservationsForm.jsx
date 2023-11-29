@@ -5,6 +5,8 @@ import "../styles/Reservations.css";
 import ConfirmForm from "./ConfirmForm";
 
 function ReservationForm({ basicFormValues }) {
+  const [loadingSpinner, setLoadingSpinner] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [loadConfirmation, setLoadConfirmation] = useState(false);
   const [reservationForm, setReservationForm] = useState({
     resDate: "",
@@ -18,17 +20,26 @@ function ReservationForm({ basicFormValues }) {
     resDate: Yup.date().required("Date is required"),
     resTime: Yup.string().required("Time is required"),
     guests: Yup.number()
-      .required("Number of guests is required")
+      .required("Number of guests is requsetFormSubmittedired")
       .min(1, "Must be at least 1")
       .max(10, "Cannot exceed 10"),
     occasion: Yup.string().required("Occasion is required"),
   });
 
-  const onSubmit = (values) => {
+  const onSubmit = async (values) => {
     // Handle form submission logic here
     console.log("Form submitted with values:", values);
+    setLoadingSpinner(true);
+
+    // Add a 5-second delay (sleep)
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+
+    // Continue with the rest of your logic after the delay
     setLoadConfirmation(true);
     setReservationForm(values);
+    setFormSubmitted(true);
+
+    setLoadingSpinner(false);
   };
 
   const formik = useFormik({
@@ -43,9 +54,11 @@ function ReservationForm({ basicFormValues }) {
         <div>
           <label htmlFor="resDate">Choose date</label>
           <input
+            className="input"
             type="date"
             id="resDate"
             name="resDate"
+            disabled={formSubmitted}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.resDate}
@@ -68,12 +81,24 @@ function ReservationForm({ basicFormValues }) {
             <option value="Default" hidden>
               Select to choose
             </option>
-            <option value="17:00">17:00</option>
-            <option value="18:00">18:00</option>
-            <option value="19:00">19:00</option>
-            <option value="20:00">20:00</option>
-            <option value="21:00">21:00</option>
-            <option value="22:00">22:00</option>
+            <option value="17:00" disabled={formSubmitted}>
+              17:00
+            </option>
+            <option value="18:00" disabled={formSubmitted}>
+              18:00
+            </option>
+            <option value="19:00" disabled={formSubmitted}>
+              19:00
+            </option>
+            <option value="20:00" disabled={formSubmitted}>
+              20:00
+            </option>
+            <option value="21:00" disabled={formSubmitted}>
+              21:00
+            </option>
+            <option value="22:00" disabled={formSubmitted}>
+              22:00
+            </option>
           </select>
           <p>
             {formik.errors.resTime &&
@@ -85,12 +110,14 @@ function ReservationForm({ basicFormValues }) {
         <div>
           <label htmlFor="guests">Number of guests</label>
           <input
+            className="input"
             type="number"
             placeholder="0"
             min="1"
             max="10"
             id="guests"
             name="guests"
+            disabled={formSubmitted}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.guests}
@@ -114,8 +141,12 @@ function ReservationForm({ basicFormValues }) {
             <option value="Default" hidden>
               Select to choose
             </option>
-            <option value="Birthday">Birthday</option>
-            <option value="Anniversary">Anniversary</option>
+            <option disabled={formSubmitted} value="Birthday">
+              Birthday
+            </option>
+            <option disabled={formSubmitted} value="Anniversary">
+              Anniversary
+            </option>
           </select>
           <p>
             {formik.errors.occasion &&
@@ -123,15 +154,31 @@ function ReservationForm({ basicFormValues }) {
               formik.errors.occasion}
           </p>
         </div>
-
+        <div className="loading-spinner">
+          {loadingSpinner && (
+            <div class="lds-roller">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          )}
+        </div>
         <div className="reservations-basic-form-btn">
-          <button className="active-btn basic-info" type="submit">
-            Make Your reservation
+          <button
+            className="active-btn basic-info"
+            disabled={formSubmitted}
+            type="submit"
+          >
+            Make Reservation
           </button>
         </div>
       </form>
       <div>
-        <li>3. CONFIRMATION</li>
         {loadConfirmation && (
           <ConfirmForm
             basicFormData={basicFormValues}
