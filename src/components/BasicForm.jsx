@@ -9,7 +9,7 @@ import ReservationsForm from "./ReservationsForm";
 function BasicForm() {
   const [loadReservationForm, setLoadReservationForm] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [basicFormValues, setBasicFormValues] = useState({
+  const [basicForm, setBasicForm] = useState({
     firstName: "",
     lastName: "",
     mobileNumber: "",
@@ -18,10 +18,10 @@ function BasicForm() {
 
   //Formik
   const formik = useFormik({
-    initialValues: basicFormValues,
+    initialValues: basicForm,
     onSubmit: (values) => {
       console.log("onSubmit", values);
-      setBasicFormValues(values);
+      setBasicForm(values);
       setLoadReservationForm(true);
       setFormSubmitted(true);
     },
@@ -155,7 +155,9 @@ function BasicForm() {
         </form>
         <div>
           <li>2. BOOKING DETAILS</li>
-          {loadReservationForm && <ReservationsForm />}
+          {loadReservationForm && formSubmitted && (
+            <ReservationsForm basicFormValues={basicForm} />
+          )}
         </div>
       </div>
     </>

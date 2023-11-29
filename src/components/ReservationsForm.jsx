@@ -4,14 +4,15 @@ import * as Yup from "yup";
 import "../styles/Reservations.css";
 import ConfirmForm from "./ConfirmForm";
 
-const ReservationForm = () => {
+function ReservationForm({ basicFormValues }) {
   const [loadConfirmation, setLoadConfirmation] = useState(false);
-  const initialValues = {
+  const [reservationForm, setReservationForm] = useState({
     resDate: "",
     resTime: "",
     guests: "",
     occasion: "",
-  };
+  });
+  const initialValues = reservationForm;
 
   const validationSchema = Yup.object({
     resDate: Yup.date().required("Date is required"),
@@ -27,6 +28,7 @@ const ReservationForm = () => {
     // Handle form submission logic here
     console.log("Form submitted with values:", values);
     setLoadConfirmation(true);
+    setReservationForm(values);
   };
 
   const formik = useFormik({
@@ -130,10 +132,15 @@ const ReservationForm = () => {
       </form>
       <div>
         <li>3. CONFIRMATION</li>
-        {loadConfirmation && <ConfirmForm />}
+        {loadConfirmation && (
+          <ConfirmForm
+            basicFormData={basicFormValues}
+            reservationFormData={reservationForm}
+          />
+        )}
       </div>
     </>
   );
-};
+}
 
 export default ReservationForm;
