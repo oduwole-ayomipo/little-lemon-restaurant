@@ -81,7 +81,7 @@ function ConfirmReservation({ basicFormData, reservationFormData }) {
             </div>
             <div>
               <h6>Guests:</h6>
-              <span> {reservationFormData?.guests}</span>
+              <span> {reservationFormData?.guests} Persons</span>
             </div>
             <div>
               <h6>Occasion:</h6>
