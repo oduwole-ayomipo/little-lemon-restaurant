@@ -1,14 +1,13 @@
 import { React, useState } from "react";
-import "../styles/Reservations.css";
-import LoadingSpinner from "./LoadingSpinner";
+import "../../pages/Reservations/Reservations.css";
+import LoadingSpinner from "../Loading-spinner/LoadingSpinner";
 import { useFormik } from "formik";
 import Popup from "reactjs-popup";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
-import "../styles/confirm.css";
-import ReserveSummary from "./ReserveSummary";
+import ReserveSummary from "../Resevation-summary/ReserveSummary";
 
-function ConfirmForm({ basicFormData, reservationFormData }) {
+function ConfirmReservation({ basicFormData, reservationFormData }) {
   const [loadingSpinner, setLoadingSpinner] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [confirmedForm, setConfirmedForm] = useState();
@@ -142,7 +141,7 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
                         <div>TABLE RESERVED!</div>
                         <p>
                           Little Lemon Welcomes You
-                          <br /> Plot 1-6 New Railing, Chicago. New York City.
+                          <br /> Kindly check your mail for reservation details.
                         </p>
                       </div>
 
@@ -170,4 +169,4 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
   );
 }
 
-export default ConfirmForm;
+export default ConfirmReservation;

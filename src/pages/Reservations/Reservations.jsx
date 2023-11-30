@@ -1,5 +1,5 @@
-import "../styles/Reservations.css";
-import "../styles/Menu.css";
+import "./Reservations.css";
+import "../Menu/Menu.css";
 import { Link } from "react-router-dom";
 import { React } from "react";
 

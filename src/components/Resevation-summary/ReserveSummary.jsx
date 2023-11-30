@@ -1,5 +1,5 @@
 import { React } from "react";
-import "../styles/Reservations.css";
+import "./ReserveSummary.css";
 
 function ReserveSummary({
   firstName,

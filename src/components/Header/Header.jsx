@@ -1,5 +1,5 @@
-import "../styles/Header.css";
-import LLS from "../images/restaurant.jpg";
+import "./Header.css";
+import LLS from "../../images/restaurant.jpg";
 import React from "react";
 import { Link } from "react-router-dom";
 

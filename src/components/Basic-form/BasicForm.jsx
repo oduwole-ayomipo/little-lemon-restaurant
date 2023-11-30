@@ -1,11 +1,11 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../Loading-spinner/LoadingSpinner";
 import { Icon } from "@iconify/react";
 import * as Yup from "yup";
-import "../App.css";
-import ReservationsForm from "./ReservationsForm";
+import "../../App.css";
+import ReservationsForm from "../Reservation-form/ReservationsForm";
 
 function BasicForm() {
   const [loadingSpinner, setLoadingSpinner] = useState(false);

@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/Main.css";
-import FoodCard from "./FoodCard";
-import TestimonyCard from "./TestimonyCard";
-import HomeData from "../data/homedata.json";
+import "./Main.css";
+import FoodCard from "../Food-card/FoodCard";
+import TestimonyCard from "../Testimony-card/TestimonyCard";
+import HomeData from "../../data/homedata.json";
 
 function Main() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import chef from "../images/chef.jpg";
-import "../styles/Footer.css";
+import chef from "../../images/chef.jpg";
+import "./Footer.css";
 
 function Footer() {
   const handleNavLinkClick = () => {

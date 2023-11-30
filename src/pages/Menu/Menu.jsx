@@ -1,12 +1,12 @@
 import React from "react";
-import "../styles/Footer.css";
-import "../styles/Nav.css";
-import "../styles/Main.css";
-import "../components/FoodCard";
-import "../App.css";
-import "../styles/Menu.css";
-import FoodCard from "./FoodCard";
-import allMenuData from "../data/allmenu.json";
+import "../../components/Footer//Footer.css";
+import "../../components/Navigation/Nav.css";
+import "../../components/Main/Main.css";
+import "../../components/Food-card/FoodCard";
+import "../../App.css";
+import "./Menu.css";
+import FoodCard from "../../components/Food-card/FoodCard";
+import allMenuData from "../../data/allmenu.json";
 
 function Menu() {
   return (
@@ -17,9 +17,7 @@ function Menu() {
       </div>
       <nav className="menu-nav">
         <ul className="nav-links">
-          <li>
-            <a href="">Our Dishes</a>
-          </li>
+          <h4>OUR DISHES</h4>
         </ul>
       </nav>
       <hr />

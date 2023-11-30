@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/AboutPage.css";
-import "../App.css";
-import "../styles/Footer.css";
-import Olivia from "../images/olivia.jpg";
-import JoinUs from "../images/join us.jpg";
+import "./AboutPage.css";
+import "../../App.css";
+import "../../components/Footer//Footer.css";
+import Olivia from "../../images/olivia.jpg";
+import JoinUs from "../../images/join us.jpg";
 
 function AboutPage() {
   return (

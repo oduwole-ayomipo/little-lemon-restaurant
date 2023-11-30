@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/FoodCard.css";
-import "../App.css";
+import "../../components/Food-card/FoodCard.css";
+import "../../App.css";
 
 function TestimonyCard(props) {
   return (
@@ -8,15 +8,15 @@ function TestimonyCard(props) {
       <h4>{props.customer.name}</h4>
       <div className="card-description testimony">
         <img
-          src={require(`../images/${props.customer.img}`)}
+          src={require(`../../images/${props.customer.img}`)}
           width={75}
           alt=""
           className="card-image testimony-image"
         />
         <img
-          src={require(`../images/${props.customer.ratings}`)}
+          src={require(`../../images/${props.customer.ratings}`)}
           width={90}
-          alt=""
+          alt="Customer Rating Star"
         />
       </div>
       <p>{props.customer.comment}</p>

@@ -1,9 +1,9 @@
 import { React, useState } from "react";
 import { useFormik } from "formik";
-import LoadingSpinner from "./LoadingSpinner";
+import LoadingSpinner from "../Loading-spinner/LoadingSpinner";
 import * as Yup from "yup";
-import "../styles/Reservations.css";
-import ConfirmForm from "./ConfirmForm";
+import "../../pages/Reservations/Reservations.css";
+import ConfirmReservation from "../Confirm-Reservation/ConfirmReservation";
 
 function ReservationForm({ basicFormValues }) {
   const [loadingSpinner, setLoadingSpinner] = useState(false);
@@ -172,7 +172,7 @@ function ReservationForm({ basicFormValues }) {
       </form>
       <div>
         {loadConfirmation && (
-          <ConfirmForm
+          <ConfirmReservation
             basicFormData={basicFormValues}
             reservationFormData={reservationForm}
           />
