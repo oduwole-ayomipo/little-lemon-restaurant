@@ -1,34 +1,59 @@
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(27, 27, 27, 0.9);
+  transition: 02s ease-in-out;
+}
+
 .modal {
-  font-size: 12px;
-  background-color: red;
+  color: var(--secondary-grey);
+  position: relative;
+  border: 1px solid var(--primary-green);
+  border-radius: 0.6rem;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  border-radius: 0.6rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: var(--primary-green);
+  transition: 02s ease-in-out;
 }
 .modal > .header {
   width: 100%;
   border-bottom: 1px solid gray;
-  font-size: 18px;
+  color: var(--primary-yellow);
+  font-size: 1rem;
   text-align: center;
-  padding: 5px;
+  padding: 0.8rem;
+}
+
+.modal > .header > p {
+  color: var(--secondary-grey);
+  font-size: 0.8rem;
+  padding: 0.5rem 0 0 0;
+  line-height: 1rem;
+  font-weight: 400;
+  margin: 0 2rem;
 }
 .modal > .content {
   width: 100%;
   padding: 10px 5px;
 }
-.modal > .actions {
-  width: 100%;
-  padding: 10px 5px;
-  margin: auto;
-  text-align: center;
-}
-.modal > .close {
+
+.close {
   cursor: pointer;
   position: absolute;
   display: block;
-  padding: 2px 5px;
+  padding: 7px 9px;
   line-height: 20px;
-  right: -10px;
-  top: -10px;
-  font-size: 24px;
-  background: #ffffff;
-  border-radius: 18px;
-  border: 1px solid #cfcece;
+  right: -15px;
+  top: -12px;
+  font-size: 30px;
+  background: var(--primary-yellow);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }

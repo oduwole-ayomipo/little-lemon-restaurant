@@ -3,8 +3,10 @@ import "../styles/Reservations.css";
 import LoadingSpinner from "./LoadingSpinner";
 import { useFormik } from "formik";
 import Popup from "reactjs-popup";
+import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import "../styles/confirm.css";
+import ReserveSummary from "./ReserveSummary";
 
 function ConfirmForm({ basicFormData, reservationFormData }) {
   const [loadingSpinner, setLoadingSpinner] = useState(false);
@@ -80,7 +82,7 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
               <span> {reservationFormData?.guests}</span>
             </div>
             <div>
-              <h6>Occassion:</h6>
+              <h6>Occasion:</h6>
               <span>{reservationFormData?.occasion}</span>
             </div>
           </div>
@@ -121,40 +123,40 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
               }
               modal
             >
-              {(close) => (
-                <div className="modal">
-                  <button className="close" onClick={close}>
-                    &times;
-                  </button>
-                  <div className="header"> Modal Title </div>
-                  <div className="content">
-                    {" "}
-                    <div>
-                      {confirmedForm && (
+              {(close) =>
+                confirmedForm ? (
+                  <div className="modal-container">
+                    <div className="modal">
+                      <Link to="/">
+                        <button className="close" onClick={close}>
+                          &times;
+                        </button>
+                      </Link>
+
+                      <div className="header">
+                        <div>TABLE RESERVED!</div>
                         <p>
-                          Thank you, Your reservation has been made. Kindly
-                          visit your email for your bookings receipt! Oh, No not
-                          yet, i am yet to code that <br />
-                          This and the confirmations component is going to be a
-                          modal popup for improved ux <br /> Also the loading
-                          spinner would look prettier too
+                          Little Lemon Welcomes You
+                          <br /> Plot 1-6 New Railing, Chicago. New York City.
                         </p>
-                      )}
+                      </div>
+
+                      <div className="content">
+                        <ReserveSummary
+                          firstName={basicFormData?.firstName}
+                          lastName={basicFormData?.lastName}
+                          mobileNumber={basicFormData?.mobileNumber}
+                          emailAddress={basicFormData?.emailAddress}
+                          Date={reservationFormData?.resDate}
+                          Time={reservationFormData?.resTime}
+                          Guests={reservationFormData?.guests}
+                          Occasion={reservationFormData?.occasion}
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div className="actions">
-                    <button
-                      className="button"
-                      onClick={() => {
-                        console.log("modal closed ");
-                        close();
-                      }}
-                    >
-                      close modal
-                    </button>
-                  </div>
-                </div>
-              )}
+                ) : null
+              }
             </Popup>
           </div>
         </form>
