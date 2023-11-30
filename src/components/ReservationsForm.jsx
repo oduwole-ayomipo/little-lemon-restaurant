@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { useFormik } from "formik";
+import LoadingSpinner from "./LoadingSpinner";
 import * as Yup from "yup";
 import "../styles/Reservations.css";
 import ConfirmForm from "./ConfirmForm";
@@ -31,8 +32,8 @@ function ReservationForm({ basicFormValues }) {
     console.log("Form submitted with values:", values);
     setLoadingSpinner(true);
 
-    // Add a 5-second delay (sleep)
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    // Add a 4-second delay (sleep)
+    await new Promise((resolve) => setTimeout(resolve, 4000));
 
     // Continue with the rest of your logic after the delay
     setLoadConfirmation(true);
@@ -156,24 +157,7 @@ function ReservationForm({ basicFormValues }) {
         </div>
 
         <div className="reservations-basic-form-btn">
-          {loadingSpinner && (
-            <div class="loadingio-spinner-spinner-bwu9f7outd">
-              <div class="ldio-ttdt4w62njc">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-          )}
+          {loadingSpinner && <LoadingSpinner />}
 
           <div>
             <button

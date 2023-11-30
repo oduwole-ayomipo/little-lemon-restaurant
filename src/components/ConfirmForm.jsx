@@ -1,21 +1,33 @@
 import { React, useState } from "react";
 import "../styles/Reservations.css";
+import LoadingSpinner from "./LoadingSpinner";
 import { useFormik } from "formik";
+import Popup from "reactjs-popup";
 import * as Yup from "yup";
+import "../styles/confirm.css";
 
 function ConfirmForm({ basicFormData, reservationFormData }) {
+  const [loadingSpinner, setLoadingSpinner] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [confirmedForm, setConfirmedForm] = useState();
+
+  const onSubmit = async (values) => {
+    console.log("Agreed?", values);
+    setLoadingSpinner(true);
+
+    //Add a 4 secs delay
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    setConfirmedForm(true);
+    setFormSubmitted(true);
+
+    setLoadingSpinner(false);
+  };
 
   const formik = useFormik({
     initialValues: {
       agreements: false,
     },
-    onSubmit: (values) => {
-      setConfirmedForm(true);
-      console.log("Agreed", values);
-      setFormSubmitted(true);
-    },
+    onSubmit,
     validationSchema: Yup.object({
       agreements: Yup.bool().oneOf(
         [true],
@@ -92,28 +104,60 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
                 formik.errors.agreements}
             </p>
           </div>
-          <div>
-            <button
-              className="active-btn"
-              disabled={formSubmitted}
-              type="submit"
+          <div className="reservations-basic-form-btn">
+            {loadingSpinner && <LoadingSpinner />}
+
+            <Popup
+              trigger={
+                <div>
+                  <button
+                    className="active-btn basic-info"
+                    disabled={formSubmitted}
+                    type="submit"
+                  >
+                    Confirm
+                  </button>
+                </div>
+              }
+              modal
             >
-              Confirm
-            </button>
+              {(close) => (
+                <div className="modal">
+                  <button className="close" onClick={close}>
+                    &times;
+                  </button>
+                  <div className="header"> Modal Title </div>
+                  <div className="content">
+                    {" "}
+                    <div>
+                      {confirmedForm && (
+                        <p>
+                          Thank you, Your reservation has been made. Kindly
+                          visit your email for your bookings receipt! Oh, No not
+                          yet, i am yet to code that <br />
+                          This and the confirmations component is going to be a
+                          modal popup for improved ux <br /> Also the loading
+                          spinner would look prettier too
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="actions">
+                    <button
+                      className="button"
+                      onClick={() => {
+                        console.log("modal closed ");
+                        close();
+                      }}
+                    >
+                      close modal
+                    </button>
+                  </div>
+                </div>
+              )}
+            </Popup>
           </div>
         </form>
-        <div>
-          {confirmedForm && (
-            <p>
-              Thank you, Your reservation has been made. Kindly visit your email
-              for your bookings receipt! Oh, No not yet, i am yet to code that{" "}
-              <br />
-              This and the confirmations component is going to be a modal popup
-              for improved ux <br /> Also the loading spinner would look
-              prettier too
-            </p>
-          )}
-        </div>
       </div>
     </>
   );

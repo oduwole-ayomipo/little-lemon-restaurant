@@ -1,12 +1,14 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
+import LoadingSpinner from "./LoadingSpinner";
 import { Icon } from "@iconify/react";
 import * as Yup from "yup";
 import "../App.css";
 import ReservationsForm from "./ReservationsForm";
 
 function BasicForm() {
+  const [loadingSpinner, setLoadingSpinner] = useState(false);
   const [loadReservationForm, setLoadReservationForm] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [basicForm, setBasicForm] = useState({
@@ -16,15 +18,27 @@ function BasicForm() {
     emailAddress: "",
   });
 
+  const onSubmit = async (values) => {
+    // Handle form submission logic here
+    setLoadingSpinner(true);
+    console.log("onSubmit", values);
+
+    //Add a 3 secs delay
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    // Continue with the rest of your logic after the delay
+    setBasicForm(values);
+    setLoadReservationForm(true);
+    setFormSubmitted(true);
+
+    setLoadingSpinner(false);
+  };
   //Formik
   const formik = useFormik({
     initialValues: basicForm,
-    onSubmit: (values) => {
-      console.log("onSubmit", values);
-      setBasicForm(values);
-      setLoadReservationForm(true);
-      setFormSubmitted(true);
-    },
+
+    onSubmit,
+
     validationSchema: Yup.object({
       firstName: Yup.string()
         .required("Field cannot be empty")
@@ -152,13 +166,17 @@ function BasicForm() {
                 onClick={handleLinkClick}
               />
             </Link>
-            <button
-              className="active-btn basic-info"
-              disabled={formSubmitted}
-              type="submit"
-            >
-              Proceed
-            </button>
+            {loadingSpinner && <LoadingSpinner />}
+
+            <div>
+              <button
+                className="active-btn basic-info"
+                disabled={formSubmitted}
+                type="submit"
+              >
+                Proceed
+              </button>
+            </div>
           </div>
         </form>
         <div>
