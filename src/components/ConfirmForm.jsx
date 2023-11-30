@@ -37,6 +37,9 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
       ),
     }),
   });
+  const handleLinkClick = () => {
+    window.scroll(0, 0);
+  };
   return (
     <>
       <div>
@@ -128,9 +131,11 @@ function ConfirmForm({ basicFormData, reservationFormData }) {
                   <div className="modal-container">
                     <div className="modal">
                       <Link to="/">
-                        <button className="close" onClick={close}>
-                          &times;
-                        </button>
+                        <div>
+                          <button className="close" onClick={handleLinkClick}>
+                            &times;
+                          </button>
+                        </div>
                       </Link>
 
                       <div className="header">
