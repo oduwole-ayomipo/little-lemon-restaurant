@@ -1,0 +1,16 @@
+.main-container {
+  margin: 10rem 0 4rem 0;
+  padding: 3rem 15rem 3rem 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro > * {
+  margin: 1rem 0;
+}
+
+.intro h5 {
+  color: var(--primary-green);
+  font-weight: 900;
+}

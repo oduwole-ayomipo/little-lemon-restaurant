@@ -46,17 +46,19 @@ footer div {
   border-radius: 1rem;
 }
 
-footer .footer-column ul li {
-  padding: 0.1rem 0;
+footer .footer-links {
+  padding: 0.2rem 0;
 }
 
-footer .footer-column ul li a {
+.footer-column ul li a,
+.footer-links {
   color: var(--secondary-grey);
   font-weight: 400;
   font-size: 0.9rem;
 }
 
-footer .footer-column ul li a:hover {
+footer .footer-column ul li a:hover,
+.footer-links:hover {
   color: var(--secondary-pink);
   font-weight: 500;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import chef from "../../images/chef.jpg";
 import "./Footer.css";
 
@@ -22,7 +22,7 @@ function Footer() {
             DoorMat <br /> Navigation
           </div>
           <ul>
-            <li>
+            <li className="footer-links">
               <NavLink
                 to="/"
                 activeclassname="active"
@@ -31,7 +31,7 @@ function Footer() {
                 Home
               </NavLink>
             </li>
-            <li>
+            <li className="footer-links">
               <NavLink
                 to="/about"
                 activeclassname="active"
@@ -40,7 +40,7 @@ function Footer() {
                 About
               </NavLink>
             </li>
-            <li>
+            <li className="footer-links">
               <NavLink
                 to="/menu"
                 activeclassname="active"
@@ -49,7 +49,7 @@ function Footer() {
                 Menu
               </NavLink>
             </li>
-            <li>
+            <li className="footer-links">
               <NavLink
                 to="/reservations"
                 activeclassname="active"
@@ -58,7 +58,7 @@ function Footer() {
                 Reservations
               </NavLink>
             </li>
-            <li>
+            <li className="footer-links">
               <NavLink
                 to="/order-online"
                 activeclassname="active"
@@ -67,7 +67,7 @@ function Footer() {
                 Order Online
               </NavLink>
             </li>
-            <li>
+            <li className="footer-links">
               <NavLink
                 to="/login"
                 activeclassname="active"
@@ -81,35 +81,22 @@ function Footer() {
         <div className="footer-column ">
           <div className="footer-heading">Social Media</div>
           <ul>
-            <li>
-              <Link to="/">Instagram</Link>
-            </li>
-            <li>
-              <Link to="/about">LinkedIn</Link>
-            </li>
-            <li>
-              <Link to="/menu">Twitter</Link>
-            </li>
-            <li>
-              <Link to="/reservations">Facebook</Link>
-            </li>
-            <li>
-              <Link to="/order-online">Telegram</Link>
-            </li>
+            <li className="footer-links">Instagram </li>
+            <li className="footer-links">LinkedIn</li>
+            <li className="footer-links">Twitter </li>
+            <li className="footer-links">Facebook</li>
+            <li className="footer-links">Telegram</li>
           </ul>
         </div>
-        <div className="footer-column ">
+        <div className="footer-column">
           <div className="footer-heading">Contact</div>
           <ul>
-            <li>
-              <Link to="/">Address</Link>
+            <li className="footer-links">
+              Plot 1-6 New Railing, <br />
+              Chicago. New york city.
             </li>
-            <li>
-              <Link to="/about">Telephone</Link>
-            </li>
-            <li>
-              <Link to="/menu">Email</Link>
-            </li>
+            <li className="footer-links">01 - 234-567</li>
+            <li className="footer-links">infO@littlelemon.com</li>
           </ul>
         </div>
       </div>
