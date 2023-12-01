@@ -39,8 +39,14 @@ Welcome to the repository documenting my journey through the Capstone Project co
   
 ### Screenshot
 
-![](https://github.com/oduwole-ayomipo//Screenshot.png)
-
+![](https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Screenshot%202023-12-01%20033947.png
+)
+![](https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Screenshot%202023-12-01%20034007.png
+)
+![](https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Screenshot%202023-12-01%20034014.png
+)
+![](
+https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Screenshot%202023-12-01%20034019.png)
 
 ## My process
 
