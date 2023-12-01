@@ -10,9 +10,11 @@ function Nav() {
 
   return (
     <nav>
-      <div className="Logo">
-        <img src={Logo} alt="Little Lemon" />
-      </div>
+      <NavLink to="/" activeclassname="active" onClick={handleNavLinkClick}>
+        <div className="Logo">
+          <img src={Logo} alt="Little Lemon Logo" />
+        </div>
+      </NavLink>
 
       <ul className="nav-links">
         <li>

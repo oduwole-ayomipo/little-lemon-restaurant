@@ -23,7 +23,7 @@ function Header() {
             </Link>
           </div>
         </div>
-        <img src={LLS} alt="" className="header-right-img" />
+        <img src={LLS} alt="Little Lemon" className="header-right-img" />
       </div>
     </header>
   );

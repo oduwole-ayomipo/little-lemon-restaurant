@@ -7,7 +7,7 @@ function FoodCard(props) {
     <div className="card">
       <img
         src={require(`../../images/${props.menu.img}`)}
-        alt=""
+        alt="Menu Dishes"
         className="card-image"
       />
       <div className="card-description">

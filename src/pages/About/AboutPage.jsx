@@ -41,10 +41,10 @@ function AboutPage() {
             Olivia has honed her skills in top kitchens around the world,
             blending traditional techniques with innovative twists.{" "}
           </p>
-          <img src={Olivia} alt="" />
+          <img src={Olivia} alt=" Chef Olivia Zest " />
         </div>
         <div className="about-container-four">
-          <img src={JoinUs} alt="" />
+          <img src={JoinUs} alt="Welcome Home To Little Lemon" />
           <p>
             Join Us at Little Lemon! We invite you to join us at Little Lemon
             Restaurant and become part of our culinary story. From the kitchen

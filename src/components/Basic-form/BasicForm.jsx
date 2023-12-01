@@ -119,9 +119,9 @@ function BasicForm() {
             <label htmlFor="mobileNumber">Mobile Number</label>
             <input
               className="input"
-              type="number"
+              type="tel"
               name="mobileNumber"
-              value={formik.errors.mobileNumber}
+              value={formik.values.mobileNumber}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               disabled={formSubmitted}

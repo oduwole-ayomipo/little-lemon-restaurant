@@ -10,7 +10,7 @@ function TestimonyCard(props) {
         <img
           src={require(`../../images/${props.customer.img}`)}
           width={75}
-          alt=""
+          alt="customer"
           className="card-image testimony-image"
         />
         <img

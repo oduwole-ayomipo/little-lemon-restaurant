@@ -20,8 +20,12 @@ function About() {
             joy of sharing delicious meals with the ones you love.
           </h3>
           <div className="about-img-container">
-            <img src={chef} alt="" className="about-right-img1" />
-            <img src={littlelemon} alt="" className="about-right-img2" />
+            <img src={chef} alt="Chef" className="about-right-img1" />
+            <img
+              src={littlelemon}
+              alt="Little Lemon"
+              className="about-right-img2"
+            />
           </div>
         </div>
       </div>
