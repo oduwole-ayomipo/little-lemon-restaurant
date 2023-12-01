@@ -3,6 +3,7 @@ import "./AboutPage.css";
 import "../../App.css";
 import "../../components/Footer//Footer.css";
 import Olivia from "../../images/olivia.jpg";
+import { Fade } from "react-awesome-reveal";
 import JoinUs from "../../images/join us.jpg";
 
 function AboutPage() {
@@ -11,16 +12,20 @@ function AboutPage() {
       <main>
         <div className="about-container-one">
           <div className="container-one-left">
-            <p>
-              About Us. <br />
-              Meet the Chef. <br />
-              Join Us.
-            </p>
+            <Fade direction="left">
+              <p>
+                About Us. <br />
+                Meet the Chef. <br />
+                Join Us.
+              </p>
+            </Fade>
           </div>
 
           <div className="container-one-right">
-            <h1>About Us</h1>
-            <h5>Welcome to Little Lemon</h5>
+            <Fade direction="up">
+              <h1>About Us</h1>
+              <h5>Welcome to Little Lemon</h5>
+            </Fade>
             <p>
               At Little Lemon, we believe in the power of good food and warm
               hospitality. Nestled in the heart of Chicago, we have been serving
