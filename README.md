@@ -1,6 +1,6 @@
 # Little Lemon Wep App - Meta Capstone Project
 
-Welcome to the repository documenting my journey through the Capstone Project course, where I built a React-based web app for the Little Lemon restaurant. This project showcases my skills in front-end web development using React and serves as a comprehensive demonstration of my abilities.
+Welcome to the repository documenting my journey through the Meta Capstone Project course, where I built a React-based web app for the Little Lemon restaurant. This project showcases my skills in front-end web development using React and serves as a comprehensive demonstration of my abilities.
 
 ## Table of contents
 
@@ -130,4 +130,4 @@ https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Sc
 
 
 ## Acknowledgments
-ME and OpenAI
+ME and Coursera
