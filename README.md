@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Little Lemon Restaurant Capstone Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Welcome to the repository documenting my journey through the Capstone Project course, where I built a React-based web app for the Little Lemon restaurant. This project showcases my skills in front-end web development using React and serves as a comprehensive demonstration of my abilities.
 
-In the project directory, you can run:
+## Course Structure
 
-### `npm start`
+### Module 1: Starting the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Set up the development environment for efficiency.
+- Implemented version control using Git and GitHub.
+- Planned UX/UI, wireframed the project, created components, and applied design fundamentals in Figma.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Module 2: Project foundations
 
-### `npm test`
+- Revised semantic HTML and structured the app accordingly.
+- Styled the app using CSS and established a reusable CSS grid.
+- Set up and organized project components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Module 3: Project functionality
 
-### `npm run build`
+- Focused on coding interactive components, such as the app's booking form.
+- Implemented the booking form's state management.
+- Worked with data and integrated APIs to enhance functionality.
+- Improved UX/UI through design evaluation, addressing accessibility and form design.
+- Added unit tests to ensure the app's correctness and reliability.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Module 4: Graded assessment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Participated in a peer review, providing feedback on peers' projects.
+- Completed a graded assessment synthesizing skills acquired during the course.
+- Engaged in reflective exercises on the learning journey and planned the next steps in my developer career.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Achievements
 
-### `npm run eject`
+- Successfully developed a fully functional React web app for Little Lemon restaurant.
+- Demonstrated proficiency in setting up and optimizing development environments.
+- Showcased expertise in version control using Git and GitHub.
+- Applied design principles and UX/UI considerations in Figma.
+- Established a structured HTML foundation and implemented responsive CSS styling.
+- Implemented interactive components, managed state effectively, and utilized APIs.
+- Ensured code correctness and reliability through unit testing.
+- Participated in collaborative peer review and reflective assessments.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Future Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+With the completion of this Capstone Project, I now possess a job-ready portfolio, showcasing my skills to potential employers. The knowledge gained throughout this course serves as a solid foundation for my continued growth in front-end web development. I look forward to applying these skills in real-world scenarios and contributing to innovative projects within the development community.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore the code and documentation to gain insights into the development process and the skills acquired during this exciting journey!
