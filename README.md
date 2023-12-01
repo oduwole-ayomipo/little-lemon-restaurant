@@ -1,38 +1,66 @@
-# Little Lemon Restaurant Capstone Project
-
-## Overview
+# Little Lemon Wep App - Meta Capstone Project
 
 Welcome to the repository documenting my journey through the Capstone Project course, where I built a React-based web app for the Little Lemon restaurant. This project showcases my skills in front-end web development using React and serves as a comprehensive demonstration of my abilities.
+
+## Table of contents
+
+- [Course Stucture](#course-structure)
+  - [Module One](#module-one)
+  - [Module Two](#module-two)
+  - [Module Three](#module-three)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
 
 ## Course Structure
 
 ### Module 1: Starting the project
-
 - Set up the development environment for efficiency.
 - Implemented version control using Git and GitHub.
 - Planned UX/UI, wireframed the project, created components, and applied design fundamentals in Figma.
 
 ### Module 2: Project foundations
-
 - Revised semantic HTML and structured the app accordingly.
 - Styled the app using CSS and established a reusable CSS grid.
 - Set up and organized project components.
 
 ### Module 3: Project functionality
-
 - Focused on coding interactive components, such as the app's booking form.
 - Implemented the booking form's state management.
-- Worked with data and integrated APIs to enhance functionality.
+- Form Validation wih Formik
+- Setting up a validation Schema Using Yup
+- React Browser router and Hash Router
 - Improved UX/UI through design evaluation, addressing accessibility and form design.
-- Added unit tests to ensure the app's correctness and reliability.
 
-### Module 4: Graded assessment
+  
+### Screenshot
 
-- Participated in a peer review, providing feedback on peers' projects.
-- Completed a graded assessment synthesizing skills acquired during the course.
-- Engaged in reflective exercises on the learning journey and planned the next steps in my developer career.
+![](https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Screenshot%202023-12-01%20033947.png
+)
+![](https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Screenshot%202023-12-01%20034007.png
+)
+![](https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Screenshot%202023-12-01%20034014.png
+)
+![](
+https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Screenshot%202023-12-01%20034019.png)
 
-## Achievements
+## My process
+
+### Built with
+- React Library
+- Form Validation wih Formik and Yup
+- React Routers
+- Version Control
+- Semantic HTML5 markup
+- CSS Flexbox
+- Mobile-first workflow
+
+
+### What I learned
 
 - Successfully developed a fully functional React web app for Little Lemon restaurant.
 - Demonstrated proficiency in setting up and optimizing development environments.
@@ -43,8 +71,63 @@ Welcome to the repository documenting my journey through the Capstone Project co
 - Ensured code correctness and reliability through unit testing.
 - Participated in collaborative peer review and reflective assessments.
 
-## Future Steps
+- These are some snippets I am proud of
 
-With the completion of this Capstone Project, I now possess a job-ready portfolio, showcasing my skills to potential employers. The knowledge gained throughout this course serves as a solid foundation for my continued growth in front-end web development. I look forward to applying these skills in real-world scenarios and contributing to innovative projects within the development community.
+```js
+ const [basicForm, setBasicForm] = useState({
+    firstName: "",
+    lastName: "",
+    mobileNumber: "",
+    emailAddress: "",
+  });
 
-Feel free to explore the code and documentation to gain insights into the development process and the skills acquired during this exciting journey!
+  const onSubmit = async (values) => {
+    // Handle form submission logic here
+    setLoadingSpinner(true);
+    console.log("onSubmit", values);
+
+    //Add a 3 secs delay
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    // Continue with the rest of your logic after the delay
+    setBasicForm(values);
+    setLoadReservationForm(true);
+    setFormSubmitted(true);
+
+    setLoadingSpinner(false);
+  };
+  //Formik
+  const formik = useFormik({
+    initialValues: basicForm,
+
+    onSubmit,
+
+    validationSchema: Yup.object({
+      firstName: Yup.string()
+        .required("Field cannot be empty")
+        .min(3, "First name must be more than 3 characters"),
+      lastName: Yup.string()
+        .required("Field cannot be empty")
+        .min(3, "Last name must be more than 3 characters"),
+      mobileNumber: Yup.string()
+        .required("Field cannot be empty")
+        .max(11, "Phone number must be more than 11 digits"),
+      emailAddress: Yup.string()
+        .required(" Field  cannot be empty")
+        .email("Please provide a valid email"),
+    }),
+  });
+
+  const handleLinkClick = () => {
+    window.scroll(0, 0);
+```
+
+
+## Author
+
+- LinkedIn - [Oduwole Ayomipo]([https://www.frontendmentor.io/profile/oduwoleayomipo](https://www.linkedin.com/in/oduwole-ayomipo/))
+- Twitter - [JustAyooo](https://www.twitter.com/ayooo.eth)
+
+
+## Acknowledgments
+ME and OpenAI
