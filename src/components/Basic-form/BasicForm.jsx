@@ -51,7 +51,7 @@ function BasicForm() {
         .max(11, "Phone number must be more than 11 digits"),
       emailAddress: Yup.string()
         .required(" Field  cannot be empty")
-        .email("Please provide a valid email"),
+        .email("Please provide a valid email, a confirmation would be sent!"),
     }),
   });
 
@@ -79,6 +79,7 @@ function BasicForm() {
               className="input"
               type="text"
               name="firstName"
+              placeholder="Enter your first name"
               value={formik.values.firstName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -100,6 +101,7 @@ function BasicForm() {
               className="input"
               type="text"
               name="lastName"
+              placeholder="Enter your last name"
               value={formik.values.lastName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -121,6 +123,7 @@ function BasicForm() {
               className="input"
               type="tel"
               name="mobileNumber"
+              placeholder="Enter a valid Phone Number"
               value={formik.values.mobileNumber}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -142,6 +145,7 @@ function BasicForm() {
               className="input"
               type="text"
               name="emailAddress"
+              placeholder="Enter a valid Email Address"
               value={formik.values.emailAddress}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}

@@ -96,7 +96,7 @@ function Footer() {
               Chicago. New york city.
             </li>
             <li className="footer-links">01 - 234-567</li>
-            <li className="footer-links">infO@littlelemon.com</li>
+            <li className="footer-links">littlelemonrestaurant.com</li>
           </ul>
         </div>
       </div>

@@ -1,13 +1,15 @@
-import { React, useState } from "react";
+import { React, useState, useRef } from "react";
 import "../../pages/Reservations/Reservations.css";
 import LoadingSpinner from "../Loading-spinner/LoadingSpinner";
 import { useFormik } from "formik";
 import Popup from "reactjs-popup";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
 import ReserveSummary from "../Resevation-summary/ReserveSummary";
 
 function ConfirmReservation({ basicFormData, reservationFormData }) {
+  const form = useRef();
   const [loadingSpinner, setLoadingSpinner] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [confirmedForm, setConfirmedForm] = useState();
@@ -22,6 +24,22 @@ function ConfirmReservation({ basicFormData, reservationFormData }) {
     setFormSubmitted(true);
 
     setLoadingSpinner(false);
+
+    emailjs
+      .sendForm(
+        "service_9ybrkne",
+        "template_ifjzgtp",
+        form.current,
+        "i3Q18UiwOD4wVFDQ9"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   const formik = useFormik({
@@ -47,6 +65,7 @@ function ConfirmReservation({ basicFormData, reservationFormData }) {
         </div>
         <form
           className="reservations-basic-form"
+          ref={form}
           onSubmit={formik.handleSubmit}
         >
           <div className="output">
