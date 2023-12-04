@@ -27,10 +27,10 @@ function ConfirmReservation({ basicFormData, reservationFormData }) {
 
     emailjs
       .sendForm(
-        "service_9ybrkne",
-        "template_ifjzgtp",
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
         form.current,
-        "i3Q18UiwOD4wVFDQ9"
+        "YOUR_API_KEY"
       )
       .then(
         (result) => {
