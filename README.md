@@ -1,6 +1,6 @@
 # Little Lemon Wep App - Meta Capstone Project
 
-Welcome to the repository documenting my journey through the Capstone Project course, where I built a React-based web app for the Little Lemon restaurant. This project showcases my skills in front-end web development using React and serves as a comprehensive demonstration of my abilities.
+Welcome to the repository documenting my journey through the Meta Capstone Project course, where I built a React-based web app for the Little Lemon restaurant. This project showcases my skills in front-end web development using React and serves as a comprehensive demonstration of my abilities.
 
 ## Table of contents
 
@@ -31,9 +31,9 @@ Welcome to the repository documenting my journey through the Capstone Project co
 ### Module 3: Project functionality
 - Focused on coding interactive components, such as the app's booking form.
 - Implemented the booking form's state management.
-- Form Validation wih Formik
-- Setting up a validation Schema Using Yup
-- React Browser router and Hash Router
+- Implemented Form Validation wih Formik
+- Coding a validation Schema Using Yup
+- Settig up React Browser router and Hash Router
 - Improved UX/UI through design evaluation, addressing accessibility and form design.
 
   
@@ -67,8 +67,10 @@ https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Sc
 - Showcased expertise in version control using Git and GitHub.
 - Applied design principles and UX/UI considerations in Figma.
 - Established a structured HTML foundation and implemented responsive CSS styling.
-- Implemented interactive components, managed state effectively, and utilized APIs.
+- Implemented interactive components, managed state effectively.
+- Developed a form desgin and validation using Formik and Yup.
 - Ensured code correctness and reliability through unit testing.
+- Utilized Email.js to send real-time reservation confirmation to customer.
 - Participated in collaborative peer review and reflective assessments.
 
 - These are some snippets I am proud of
@@ -130,4 +132,4 @@ https://github.com/oduwole-ayomipo/little-lemon-restaurant/blob/main/snippets/Sc
 
 
 ## Acknowledgments
-ME and OpenAI
+ME and Coursera
